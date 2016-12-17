@@ -32,13 +32,6 @@ Joris Van den Bossche, Stijn Van Hoey
 
 https://github.com/jorisvandenbossche/DS-python-data-analysis
 
----
-# About the course
-
-
----
-# Outline
-
 
 ---
 # Setting up a working environment
@@ -85,6 +78,140 @@ $ jupyter notebook
 
   This will open a browser window automatically.
 
+---
+class: center, middle
+
+# Introduction
+
+---
+
+index | date
+----- | ----
+2  | 19930000
+8  | 1992-930
+27  | 20050500
+34  | 201405.01
+162 | 7/9/2287
+1400  | 0.0
+2800 | start of the year 2015
+3777| Summer
+8733  | 2013-2016
+26766  | 26/09/2002 and later 1/1/2016
+40788  | Nan
+41277  | /
+51002  | -999
+51007  | -9999
+
+--
+
+.center[Never underestimate the creativity of humans!]
+
+---
+class: center, middle
+
+![:scale 100%](./img/datacleaning1.jpg)
+
+---
+class: center, middle
+
+![:scale 100%](./img/datacleaning2.jpg)
+
+---
+class: center, middle
+
+# Why python?
+
+---
+class: center, middle
+
+# Python is...
+
+---
+
+## …OPEN SOURCE
+* No license costs!
+
+---
+
+## …WIDESPREAD
+* Large world-wide community ensures **fast development**
+* Used in **scientific** and non-scientific institutes <br> (Google, NASA, ESRI, VMM,...)
+* Python is a standard in **GIS** <br> (commercial and non-commercial tools)
+* **Multiplatform** (linux, windows,…)
+
+---
+
+## …READABLE
+
+.center[
+```
+It's easy to learn, easy to read and fast to develop
+```
+]
+<br><br><br>
+
+---
+
+## …REPRODUCIBLE
+
+.center[
+
+instead of
+```
+what did you/I clicked a few months ago?’-style WYSISYG
+```
+]
+
+---
+
+## …MULTI-FUNCTIONAL
+
+* Research and development: the python *scientific ecosystem*
+* Daily use: great as ductape/glue
+* **Automation** of time-consuming returning tasks
+
+---
+
+## ...SO WHAT? The Holy Grail ? No!
+* Commercial packages give specific support  and more direct help-functions (cfr. MATLAB)
+* Commercial packages can be more client-friendly
+* For hard numercrunching stuff, NOT the fastest solution
+* Fortran, C++ etc are also ‘widespread’, so python is just a language amongst the others
+* Risk of getting lost in the forest/flood of ‘useful packages’
+
+---
+class: center, middle
+
+# Working with python
+
+---
+
+## Ipython console
+
+<br>
+.center[![:scale 75%](./img/ipython.png)]
+
+---
+
+## Interactive Development Environment (IDE)
+
+* [**Spyder**](https://pythonhosted.org/spyder/) is shipped with Anaconda. The familiar environment for Matlab/Rstudio-users...
+* [**PyCharm**](https://www.jetbrains.com/pycharm/): Popular for web-development and Django applications, powerful when doing 'real' development (packages, libraries, software)
+* [Eclipse + **pyDev plugin**](http://www.pydev.org/): If you like working in Eclipse, just add the python environment
+* ...
+
+---
+
+## Jupyter Notebook
+<small>(*previously called IPython notebook*)</small>
+
+**Jupyter notebook** provides an **interactive** scripting environment,<br> ideal for exploration, prototyping,...
+
+.center[![:scale 70%](./img/notebook.png)]
+
+--
+
+ ...the stuff we're dealing with in this course!
 
 
     </textarea>
@@ -93,6 +220,13 @@ $ jupyter notebook
     <script src="img/remark.min.js" type="text/javascript">
     </script>
     <script>
+      var slideshow = remark.create();
+    </script>
+    <script>
+        remark.macros.scale = function (percentage) {
+          var url = this;
+          return '<img src="' + url + '" style="width: ' + percentage + '" />';
+      };
       var slideshow = remark.create();
     </script>
   </body>
