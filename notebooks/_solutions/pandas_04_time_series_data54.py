@@ -1,0 +1,1 @@
+data.resample('M').std().plot() # 'A'

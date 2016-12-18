@@ -1,0 +1,1 @@
+countries.loc[countries['density'] > 300, ['capital', 'population']]

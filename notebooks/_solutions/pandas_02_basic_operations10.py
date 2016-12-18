@@ -1,0 +1,1 @@
+population / population['Belgium']

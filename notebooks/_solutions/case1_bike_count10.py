@@ -1,0 +1,1 @@
+df = df.drop(['dag', 'tijdstip'], axis=1)

@@ -1,0 +1,1 @@
+df3 = df3.reset_index().drop_duplicates().set_index("index")

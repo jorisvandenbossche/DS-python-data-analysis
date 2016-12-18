@@ -1,0 +1,1 @@
+df['Fare'].quantile(0.75)

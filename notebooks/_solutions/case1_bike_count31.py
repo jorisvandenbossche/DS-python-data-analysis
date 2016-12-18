@@ -1,0 +1,1 @@
+df = df[df['active'] != 'OFF']
