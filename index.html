@@ -34,21 +34,23 @@ https://github.com/jorisvandenbossche/DS-python-data-analysis
 
 
 ---
+
 # Setting up a working environment
 
-* Working on a PC:
+* Working on a PC from the computer room [1]:
 
   * Ensure you have a helios account: http://helpdesk.ugent.be/account/helios.php
   * Log in at https://snake.ugent.be
+  * Start a Terminal: `New` (upper right) > `Terminal`
 
-* Working on your own laptop
+* Working on your own laptop [2]
 
 ---
 # Getting the course materials
 
-* With using git (recommended)
+* With using git ([1] and recommended for [2])
 
-  First time:
+  First time (inside a terminal or cmd):
 
   ```
 $ git clone https://github.com/jorisvandenbossche/DS-python-data-analysis.git
@@ -61,12 +63,42 @@ $ cd DS-python-data-analysis
   $ git pull
   ```
 
-* Without git: download ZIP from https://github.com/jorisvandenbossche/DS-python-data-analysis (green button "Clone or download")
+* Without git for [2]: download ZIP from https://github.com/jorisvandenbossche/DS-python-data-analysis (green button "Clone or download")
 
 ---
-# Starting a Jupyter Notebook
 
-* Open a terminal and navigate to the `DS-python-data-analysis` directory.
+# Create an environment with Anaconda (for [2])
+(*make sure you have a working internet connection*)
+
+Use our [environment.yml](https://github.com/jorisvandenbossche/DS-python-data-analysis/blob/master/environment.yml) file inside the course folder to set up your Python working environment
+
+In a terminal or cmd, navigate to the `DS-python-data-analysis` folder and use the following command:
+
+```
+$ conda env create -f environment.yml
+```
+
+---
+
+# Create an environment with Anaconda (for [2])
+(*make sure you have a working internet connection*)
+
+When the environment is installed, activate the environment inside the terminal/cmd:
+
+* Windows-users
+```
+$ activate DS-python-data-analysis
+```
+
+* Linux/Mac-users
+```
+$ source activate DS-python-data-analysis
+```
+
+---
+# Starting a Jupyter Notebook (for [2])
+
+* In the terminal, navigate to the `DS-python-data-analysis` directory if not there already
 
 * Ensure that the correct environment is activated.
 
@@ -77,6 +109,22 @@ $ jupyter notebook
   ```
 
   This will open a browser window automatically.
+
+---
+class: center, middle
+
+When you see something like this...
+
+
+![:scale 100%](./img/startup.png)
+
+...relax, you're ready to start!
+
+
+---
+class: center, middle
+
+![:scale 100%](https://i.ytimg.com/vi/PlaYMh-u-2w/maxresdefault.jpg)
 
 ---
 class: center, middle
@@ -215,6 +263,37 @@ class: center, middle
 
 
 ---
+class:middle, center
+
+ask for help
+
+![:scale 60%](./img/postit.jpg)
+
+list you're never-to-forget commands
+
+---
+class: middle, center
+
+![:scale 100%](./img/issuetracker.png)
+
+Report bugs, typo's, suggestions... as issues ([New issue](https://github.com/jorisvandenbossche/DS-python-data-analysis/issues/new))
+
+
+---
+
+# Overview of today (first day)
+
+Remainder of the morning:
+
+* Introduction to Jupyter notebook
+* Recap of the basic python and numpy syntax
+
+Afternoon:
+
+* Introduction to pandas
+* Case study: bike count data
+
+---
 class: center, middle
 
 
@@ -261,13 +340,16 @@ When working with **tabular or structured data** (like R dataframe, SQL table, E
 
 ---
 
-# Further reading
+# Let's get to it!
 
-- the documentation: http://pandas.pydata.org/pandas-docs/stable/
-- Wes McKinney's book "Python for Data Analysis"
-- Tom Augspurger's series on modern idiomatic pandas: https://tomaugspurger.github.io/modern-1.html
-- lots of tutorials on the internet, eg http://github.com/jvns/pandas-cookbook, https://github.com/brandon-rhodes/pycon-pandas-tutorial/
+  1. Data structures
+  2. Basic Operations
+  3. Indexing and selecting data
+  4. Time series data
+  5. Combining data - concat
 
+
+* Case study: bike count data
 
 
     </textarea>
