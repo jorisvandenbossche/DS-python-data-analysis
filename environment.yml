@@ -6,8 +6,12 @@ dependencies:
 - ipython
 - jupyter
 - matplotlib>1.5
+- mplleaflet
 - notebook
 - numpy
 - pandas=0.19
+- pyproj
 - python=3.5
+- requests
 - seaborn
+- xlrd
