@@ -1,0 +1,1 @@
+[el for el in dir(list) if not el[0]=='_']

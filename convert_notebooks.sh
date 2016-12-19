@@ -9,8 +9,13 @@
 #jupyter nbconvert --to=notebook --config nbconvert_config.py --output "06 - Reshaping data.ipynb" "solved - 06 - Reshaping data.ipynb"
 
 
-declare -a arr=("python_recap/00-jupyter_introduction.ipynb"
-                "python_recap/python_rehearsal"
+declare -a arr=("00-jupyter_introduction.ipynb"
+                "01-basic.ipynb"
+                "02-control_flow.ipynb"
+                "03-functions.ipynb"
+                "04-reusing_code.ipynb"
+                "05-numpy.ipynb"
+                "python_rehearsal"
                 "pandas_01_data_structures.ipynb"
                 "pandas_02_basic_operations.ipynb" 
                 "pandas_03_selecting_data.ipynb"
@@ -25,5 +30,5 @@ do
    echo "$i"
    # or do whatever with individual element of the array
    
-   jupyter nbconvert --to=notebook --config ../nbconvert_config.py --output "notebooks/$i" "$i"   
+   jupyter nbconvert --to=notebook --config ../../nbconvert_config.py --output "notebooks/$i" "$i"   
 done
