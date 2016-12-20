@@ -377,6 +377,108 @@ class: middle
 6. Biodiversity data: analysis
 
 
+
+---
+
+# Overview of today (third day)
+
+### 1. Biodiversity data: analysis
+### 2. Air quality: processing
+### 3. Air quality: analysis and visualisation
+### 4. Closing remarks
+
+---
+class: center, middle, bgheader
+background-image: url(img/JakeVdP-ecosystem1.svg)
+background-size: cover
+
+---
+count: false
+class: center, middle, bgheader
+background-image: url(img/JakeVdP-ecosystem2.svg)
+background-size: cover
+
+---
+count: false
+class: center, middle, bgheader
+background-image: url(img/JakeVdP-ecosystem3.svg)
+background-size: cover
+
+---
+count: false
+class: center, middle, bgheader
+background-image: url(img/JakeVdP-ecosystem4.svg)
+background-size: cover
+
+---
+count: false
+class: center, middle, bgheader
+background-image: url(img/JakeVdP-ecosystem5.svg)
+background-size: cover
+
+---
+
+# And many more tools
+
+**Performance**: Numba, Numexpr, Theano, ...
+
+**Visualisation**: Bokeh, Seaborn, Altair, Plotly, Mayavi, HoloViews, ...
+
+**Data structures and (parallel/distributed) computation**: Xarray, Dask, Distributed, ...
+
+**Packaging and distribution**: pip/wheels, conda, Anaconda, Canopy, ...
+
+---
+
+# Conda
+
+### Why using conda?
+
+- Consistent packages manager across Window, Mac and Linux
+- Many precompiled packages available
+- Much less problems with installation!
+
+--
+
+### Why different environments?
+
+- Manage the dependencies of a specific project
+- You can install different version of Python and other packages alongside on your computer
+- Easily share environments
+
+---
+## Small overview of conda commands
+
+Creating a new environment:
+
+```
+conda create -n my_env python=3.5 pandas
+
+# or from environment file
+conda env create -f environment.yml
+```
+
+Activating an environment:
+
+```
+activate my_env            # Windows
+source activate my_env     # Mac / Linux
+```
+
+Install a new package:
+
+```
+conda install matplotlib
+```
+
+
+List all installed packages: `conda list`
+
+List all your environments: `conda info -e`
+
+See the docs: http://conda.pydata.org/docs/using/index.html
+
+
     </textarea>
 <!--    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
 </script>-->
