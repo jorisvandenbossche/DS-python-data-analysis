@@ -1,0 +1,1 @@
+survey_data.set_index('eventDate').resample('A').size().plot()

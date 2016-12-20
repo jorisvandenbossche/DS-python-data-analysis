@@ -1,0 +1,1 @@
+titles[titles['title'].str.startswith('The Life')]['title'].value_counts().head(10)

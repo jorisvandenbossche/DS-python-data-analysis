@@ -1,0 +1,1 @@
+sum(survey_data_processed.duplicated())

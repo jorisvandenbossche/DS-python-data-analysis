@@ -1,0 +1,1 @@
+plot_data = pd.read_excel("../data/plot_location.xlsx", skiprows=3, index_col=0)

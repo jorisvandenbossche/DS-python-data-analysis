@@ -1,0 +1,1 @@
+count_weekday_years = survey_data.groupby([survey_data["eventDate"].dt.year, survey_data["eventDate"].dt.dayofweek]).size().unstack()

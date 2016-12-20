@@ -1,0 +1,1 @@
+month_evolution = subsetspecies.set_index('eventDate').groupby("name").resample('M').size()
