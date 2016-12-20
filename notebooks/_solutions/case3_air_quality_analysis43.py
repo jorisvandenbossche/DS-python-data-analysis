@@ -1,0 +1,1 @@
+sns.lmplot(x="BETN029", y="FR04037", data=subset, hue="weekday")

@@ -1,0 +1,1 @@
+subset["weekday"] = subset["weekday"].replace(to_replace={0:"Monday", 6:"Sunday"})
