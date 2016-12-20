@@ -1,0 +1,1 @@
+df_species_annotated = pd.DataFrame(species_annotated).transpose()

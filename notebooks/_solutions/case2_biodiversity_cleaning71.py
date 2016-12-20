@@ -1,0 +1,1 @@
+species_data.loc[species_data["species_id"] == "NE", "species_id"] = "NA"

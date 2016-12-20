@@ -1,0 +1,1 @@
+df['Underaged'] = df['Age'] <= 18
