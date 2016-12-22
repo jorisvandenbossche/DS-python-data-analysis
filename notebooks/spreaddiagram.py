@@ -120,7 +120,7 @@ def spread_diagram(axs, obs, mod, infobox = True, *args, **kwargs):
     axs.plot([getmin, getmax], [getmin, getmax],'k--', linewidth = 0.5)
     
     slope, intercept, r_value, p_value, std_err = stats.linregress(obs, mod)
-    #    m,b = p.polyfit(obs, mod, 1)
+    
     forplot = np.arange(getmin, getmax, 0.01)
     axs.plot(forplot, slope*forplot + intercept, '-', color = 'grey', 
              linewidth = 0.5)  
