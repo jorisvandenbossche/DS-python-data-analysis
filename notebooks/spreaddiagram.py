@@ -127,7 +127,7 @@ def spread_diagram(axs, obs, mod, infobox = True, *args, **kwargs):
     axs.set_xlim(left = getmin, right = getmax)
     axs.set_ylim(bottom = getmin, top = getmax)   
     
-    rmse = np.sqrt((np.sum((obs-mod)**2))/obs.size)   
+    rmse = root_mean_square_error(obs, mod)
     
     #for infobox
     if infobox == True:
@@ -162,14 +162,15 @@ def main(argv=None):
     print(argv[0])
     
     # loading data from a file
-    data = pd.read_csv(argv[1], parse_dates=True, index_col=0).dropna()
+    data = pd.read_csv(argv[1], parse_dates=True,               index_col=0).dropna()
     
     # using custom plot function
     
+    formatfig = argv[2]
     fig, ax = plt.subplots()
-    spread_diagram(ax, data.iloc[:,0].values, data.iloc[:,1].values, infobox = True)
-    fig.savefig("{}_evaluation.png".format(datetime.date.today().strftime("%Y%m%d")))
-    plt.show()
+    spread_diagram(ax, data.iloc[:,0].values, 
+                   data.iloc[:,1].values, infobox = True)
+    fig.savefig("{}_evaluation.{}".format(datetime.date.today().strftime("%Y%m%d"), formatfig))
     
 
 if __name__ == "__main__":
