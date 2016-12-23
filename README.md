@@ -76,8 +76,5 @@ $ source activate DS-python-data-analysis
 $ jupyter notebook
   ```
 
-  This will open a browser window automatically.
-
-
-
+  This will open a browser window automatically. Use the `notebooks` folder to access the notebooks containing the course material. If you require some rehearsel of python itself (and numpy), check the [python_recap](https://github.com/jorisvandenbossche/DS-python-data-analysis/tree/master/notebooks/python_recap) folder first, otherwise you can directly jump into the `pandas_0x_` notebooks.
 Authors: Joris Van den Bossche, Stijn Van Hoey
