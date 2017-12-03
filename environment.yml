@@ -5,13 +5,13 @@ channels:
 dependencies:
 - ipython
 - jupyter
-- matplotlib>1.5
+- matplotlib>2
 - mplleaflet
 - notebook
 - numpy
-- pandas=0.19
+- pandas=0.21
 - pyproj
-- python=3.5
+- python=3.6
 - requests
 - seaborn
 - xlrd
