@@ -27,8 +27,8 @@ Look at the `environment.yml` file for all packages that need to be installed.
   First time (inside a terminal or cmd):
 
   ```
-$ git clone https://github.com/jorisvandenbossche/DS-python-data-analysis.git
-$ cd DS-python-data-analysis
+  $ git clone https://github.com/jorisvandenbossche/DS-python-data-analysis.git
+  $ cd DS-python-data-analysis
   ```
 
   Updating (on second or third day):
@@ -55,14 +55,14 @@ $ conda env create -f environment.yml
 When the environment is installed, activate the environment inside the terminal/cmd:
 
 * Windows-users
-```
-$ activate DS-python-data-analysis
-```
+  ```
+  $ activate DS-python-data-analysis
+  ```
 
 * Linux/Mac-users
-```
-$ source activate DS-python-data-analysis
-```
+  ```
+  $ source activate DS-python-data-analysis
+  ```
 
 ### Starting a Jupyter Notebook (for [2])
 
@@ -73,7 +73,7 @@ $ source activate DS-python-data-analysis
 * Start a jupyter notebook server with
 
   ```
-$ jupyter notebook
+  $ jupyter notebook
   ```
 
   This will open a browser window automatically. Use the `notebooks` folder to access the notebooks containing the course material. If you require some rehearsel of python itself (and numpy), check the [python_recap](https://github.com/jorisvandenbossche/DS-python-data-analysis/tree/master/notebooks/python_recap) folder first, otherwise you can directly jump into the `pandas_0x_` notebooks.
