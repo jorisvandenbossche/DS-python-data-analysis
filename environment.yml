@@ -16,3 +16,4 @@ dependencies:
 - requests
 - seaborn
 - xlrd
+- plotnine=0.3.0
