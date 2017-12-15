@@ -10,10 +10,9 @@ dependencies:
 - notebook
 - numpy
 - pandas=0.21
-- plotnine
+- plotnine=0.3.0
 - pyproj
 - python=3.6
 - requests
 - seaborn
 - xlrd
-- plotnine=0.3.0
