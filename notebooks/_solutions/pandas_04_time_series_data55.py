@@ -1,1 +1,0 @@
-data.loc['2011':'2012', 'L06_347'].resample('M').agg(['mean', 'median']).plot()

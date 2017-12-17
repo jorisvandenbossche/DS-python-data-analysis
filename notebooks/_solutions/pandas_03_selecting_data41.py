@@ -1,1 +1,1 @@
-len(titles[titles['year'] // 10 == 195])
+inception = cast[cast['title'] == 'Inception']

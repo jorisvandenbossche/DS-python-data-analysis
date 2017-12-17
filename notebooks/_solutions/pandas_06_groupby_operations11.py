@@ -1,1 +1,2 @@
-df.groupby('Sex')['Survived'].mean()
+# df['Survived'].sum() / len(df['Survived'])
+df['Survived'].mean()

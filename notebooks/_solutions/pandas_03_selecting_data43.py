@@ -1,1 +1,1 @@
-len(inception[inception['n'].isnull()])
+inception['n'].isnull().sum()

@@ -1,1 +1,1 @@
-inception = cast[cast['title'] == 'Inception']
+len(inception[inception['n'].isnull()])

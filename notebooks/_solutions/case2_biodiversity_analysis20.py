@@ -1,1 +1,1 @@
-heatmap_prep = survey_data.groupby([survey_data['eventDate'].dt.year, survey_data['eventDate'].dt.month]).size().unstack()
+heatmap_prep_sns = heatmap_prep_plotnine.pivot_table(index='year', columns='month', values='count')

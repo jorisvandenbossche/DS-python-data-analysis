@@ -1,1 +1,0 @@
-daily.resample('M').agg(['min', 'max']).plot() # monthly minimum and maximum values of these daily averages

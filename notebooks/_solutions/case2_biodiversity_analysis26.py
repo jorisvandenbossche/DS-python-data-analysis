@@ -1,5 +1,5 @@
 species_per_plot = survey_data.reset_index().pivot_table(index="name", 
-                                                         columns="plot_id", 
+                                                         columns="verbatimLocality", 
                                                          values="occurrenceID", 
                                                          aggfunc='count')
 

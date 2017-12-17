@@ -1,1 +1,0 @@
-merriami = survey_data[survey_data["name"] == "Dipodomys merriami"]

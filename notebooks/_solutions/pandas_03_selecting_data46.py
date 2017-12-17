@@ -1,3 +1,4 @@
-titanic = cast[(cast['title'] == 'Titanic') & (cast['year'] == 1997)]
-titanic = titanic[titanic['n'].notnull()]
-titanic.sort_values('n')
+brad = cast[cast['name'] == 'Brad Pitt']
+brad = brad[brad['year'] // 10 == 199]
+brad = brad[brad['n'] == 2]
+brad.sort_values('year')

@@ -1,4 +1,2 @@
-# Alternative
-#years = survey_data["eventDate"].dt.year.rename('year')
-#dayofweaks = survey_data["eventDate"].dt.dayofweek.rename('dayofweak')
-#count_weekday_years = pd.crosstab(index=years, columns=dayofweaks)
+species_evolution = month_evolution.unstack(level=0)
+axs = species_evolution.plot(subplots=True, figsize=(16, 8), sharey=True)
