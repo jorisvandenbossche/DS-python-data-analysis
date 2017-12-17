@@ -26,12 +26,16 @@ class: center, middle
 
 # Data manipulation, analysis and visualisation in Python
 
-Specialist course Doctoral schools of Ghent University, 19-21 December 2016
+Specialist course Doctoral schools of Ghent University, 18-19-21 December 2017
 
 Joris Van den Bossche, Stijn Van Hoey
 
 https://github.com/jorisvandenbossche/DS-python-data-analysis
 
+---
+class: center, middle
+
+# Setting up a working environment
 
 ---
 
@@ -215,7 +219,7 @@ what did you/I clicked a few months ago?’-style WYSISYG
 ## …MULTI-FUNCTIONAL
 
 * Research and development: the python *scientific ecosystem*
-* Daily use: great as ductape/glue
+* Daily use: great as ducttape/glue
 * **Automation** of time-consuming returning tasks
 
 ---
@@ -223,14 +227,88 @@ what did you/I clicked a few months ago?’-style WYSISYG
 ## ...SO WHAT? The Holy Grail ? No!
 * Commercial packages give specific support  and more direct help-functions (cfr. MATLAB)
 * Commercial packages can be more client-friendly
-* For hard numercrunching stuff, NOT the fastest solution
-* Fortran, C++ etc are also ‘widespread’, so python is just a language amongst the others
+* For hard number-crunching stuff, NOT the fastest solution
+* R, Fortran, C++ etc are also ‘widespread’, so python is just a language amongst the others
 * Risk of getting lost in the forest/flood of ‘useful packages’
 
 ---
 class: center, middle
 
-# Working with python
+# Installing Python
+
+---
+
+# Installing Python
+
+We **recommend Anaconda Distribution**, a Python distribution (= Python + most used packages) that targets (data) scientists: https://www.anaconda.com/download/
+
+But alternatives: download from python.org/downloads/ and install packages with `pip`, other distributions such as Enthought Canopy, ..
+
+The Anaconda Distribution comes with the **conda package manager**
+
+---
+
+# Conda
+
+### Why using conda?
+
+- Consistent package manager across Windows, Mac and Linux
+- Many precompiled packages available
+- Less problems with installation!
+
+--
+
+### Why different environments?
+
+- Manage the dependencies of a specific project/paper/group/...
+- You can install different version of Python and other packages alongside on your computer
+- Easily share environments with other
+
+
+---
+## Small overview of conda commands
+
+Creating a new environment:
+
+```
+conda create -n my_env python=3.5 pandas
+
+# or from environment file
+conda env create -f environment.yml
+```
+
+Activating an environment:
+
+```
+activate my_env            # Windows
+source activate my_env     # Mac / Linux
+```
+
+Install a new package:
+
+```
+conda install matplotlib     # if not working, try: pip install ...
+```
+
+
+List all installed packages: `conda list`
+
+List all your environments: `conda info -e`
+
+See the docs: http://conda.pydata.org/docs/using/index.html
+
+---
+class: center, middle
+
+### Keep track of your python ecosystem with an  `environment.yml`
+<br><br>
+`conda env export > environment.yml`
+
+
+---
+class: center, middle
+
+# Working with Python
 
 ---
 
@@ -291,7 +369,6 @@ Remainder of the morning:
 Afternoon:
 
 * Introduction to pandas
-* Case study: bike count data
 
 ---
 
@@ -475,65 +552,6 @@ background-size: cover
 **Data structures and (parallel/distributed) computation**: Xarray, Dask, Distributed, ...
 
 **Packaging and distribution**: pip/wheels, conda, Anaconda, Canopy, ...
-
----
-
-# Conda
-
-### Why using conda?
-
-- Consistent package manager across Windows, Mac and Linux
-- Many precompiled packages available
-- Less problems with installation!
-
---
-
-### Why different environments?
-
-- Manage the dependencies of a specific project/paper/group/...
-- You can install different version of Python and other packages alongside on your computer
-- Easily share environments with other
-
-
----
-## Small overview of conda commands
-
-Creating a new environment:
-
-```
-conda create -n my_env python=3.5 pandas
-
-# or from environment file
-conda env create -f environment.yml
-```
-
-Activating an environment:
-
-```
-activate my_env            # Windows
-source activate my_env     # Mac / Linux
-```
-
-Install a new package:
-
-```
-conda install matplotlib     # if not working, try: pip install ...
-```
-
-
-List all installed packages: `conda list`
-
-List all your environments: `conda info -e`
-
-See the docs: http://conda.pydata.org/docs/using/index.html
-
----
-class: center, middle
-
-### Keep track of your python ecosystem with an  `environment.yml`
-<br><br>
-`conda env export > environment.yml`
-
 
 ---
 class: center, middle
