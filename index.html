@@ -22,7 +22,7 @@
   <style>
    .section_background {background-color:#c2c444; color: #fff}
    .day_background {background-color:#ececec; color: #000}
-  </style
+  </style>
   </head>
   <body>
     <textarea id="source">
@@ -57,6 +57,9 @@ Go to https://hackmd.io/s/SyxYEr4Mf
 .center[
 ![:scale 75%](./img/work_joris_1.png)]
 
+.footnote[
+https://team.inria.fr/parietal/18-2/paris-saclay-cds/
+]
 ---
 
 ### Stijn Van Hoey
@@ -67,6 +70,9 @@ Go to https://hackmd.io/s/SyxYEr4Mf
 .center[
 ![:scale 75%](./img/work_stijn_1.png)]
 
+.footnote[
+https://lifewatch.inbo.be/blog/
+]
 ---
 class: center, middle
 
@@ -79,18 +85,17 @@ class: middle, section_background
 
 ---
 
-# Setting up a working environment
+## Setting up a working environment
 
 * Working on a PC from the computer room [1]:
 
-  * Ensure you have a helios account: http://helpdesk.ugent.be/account/helios.php
-  * Log in at https://snake.ugent.be
+  * Open the "Jupyter Notebook" app on https://athena.ugent.be/
   * Start a Terminal: `New` (upper right) > `Terminal`
 
 * Working on your own laptop [2]
 
 ---
-# Getting the course materials
+## Getting the course materials
 
 * With using git ([1] and recommended for [2])
 
@@ -111,7 +116,7 @@ $ cd DS-python-data-analysis
 
 ---
 
-# Create an environment with Anaconda (for [2])
+## Create an environment with Anaconda (for [2])
 (*make sure you have a working internet connection*)
 
 Use our [environment.yml](https://github.com/jorisvandenbossche/DS-python-data-analysis/blob/master/environment.yml) file inside the course folder to set up your Python working environment
@@ -124,7 +129,7 @@ $ conda env create -f environment.yml
 
 ---
 
-# Create an environment with Anaconda (for [2])
+## Create an environment with Anaconda (for [2])
 (*make sure you have a working internet connection*)
 
 When the environment is installed, activate the environment inside the terminal/cmd:
@@ -140,7 +145,7 @@ $ source activate DS-python-data-analysis
 ```
 
 ---
-# Starting a Jupyter Notebook (for [2])
+## Starting a Jupyter Notebook (for [2])
 
 * In the terminal, navigate to the `DS-python-data-analysis` directory if not there already
 
@@ -348,6 +353,23 @@ class: center, middle
 conda env export > environment.yml
 ```
 
+---
+
+## Summary for this course
+
+When starting the day:
+
+```
+# navigate to the course materials in a terminal
+cd .../DS-python-data-analysis
+
+# activate the environment for this course
+source activate DS-python-data-analysis   # Linux / macros
+activate DS-python-data-analysis          # Windows
+
+# start the notebook
+jupyter notebook
+```
 
 ---
 class: middle, section_background
@@ -680,12 +702,12 @@ class: center, middle
           return '<img src="' + url + '" style="width: ' + percentage + '" />';
       };
       var slideshow = remark.create();
-    </script> 
+    </script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </body>
 </html>
