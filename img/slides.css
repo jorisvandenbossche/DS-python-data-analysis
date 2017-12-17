@@ -117,5 +117,40 @@ td, th {
 }
 
 a:visited {
-  color: blue;
+  color: #356196;
 }
+
+a:link {
+  color: #356196;
+}
+
+.footnote {
+  color: #808080;
+  background-color: rgba(256, 256, 256, 0.9);
+  font-size: 60%;
+  position: absolute; 
+  bottom: 30px; 
+  left: 20px;
+  text-align: left;
+  line-height: 100%;
+  padding: 5px;
+}
+
+.remark-slide-content { 
+  background-size: contain; 
+}
+
+.emphasize  {
+  color: rgba(100, 100, 100, 0.95);
+  font-size: 150%;
+  line-height: 120%;
+}
+
+.widthlimit {
+  width: 600px;
+  font-size: 200%;
+}
+
+.fadetext {
+  opacity: 0.3;
+]
