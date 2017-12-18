@@ -1,1 +1,1 @@
-titles[titles.title == 'Treasure Island'].sort_values('year')
+males = df[df['Sex'] == 'male']

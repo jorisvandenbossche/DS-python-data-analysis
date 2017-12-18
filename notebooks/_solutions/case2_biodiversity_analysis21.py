@@ -1,2 +1,2 @@
-fig, ax = plt.subplots(figsize=(10, 8))
-ax = sns.heatmap(heatmap_prep_sns, cmap='Reds')
+heatmap_tidy = heatmap_prep_sns.reset_index().melt(id_vars=["year"], value_name="count")
+heatmap_tidy.head()

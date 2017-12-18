@@ -1,1 +1,1 @@
-data.between_time('08:00', '20:00')
+data[(data.index.hour > 8) & (data.index.hour < 20)]

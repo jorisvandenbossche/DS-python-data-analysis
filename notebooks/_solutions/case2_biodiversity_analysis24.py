@@ -1,1 +1,1 @@
-survey_data.groupby("name").size().nlargest(8)
+survey_data['name'].value_counts()[:8]

@@ -1,1 +1,2 @@
-countries[(countries['density'] > 100) & (countries['density'] < 300)]
+countries.loc['United Kingdom', 'capital'] = 'Cambridge'
+countries

@@ -1,1 +1,1 @@
-len(titles[(titles['year'] >= 1950) & (titles['year'] <= 1959)])
+df.loc[df['Sex'] == 'male', 'Age'].mean()

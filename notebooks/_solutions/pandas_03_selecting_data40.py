@@ -1,1 +1,1 @@
-len(titles[titles['year'] // 10 == 195])
+df.loc[df['Sex'] == 'female', 'Age'].mean()

@@ -1,1 +1,2 @@
-end_of_experiment = tidy_experiment[tidy_experiment["experiment_time_h"] == "OD_72h"].copy()
+# The Nan-values of the PhageR_72h when no phage represent survival (1)
+end_of_experiment["PhageR_72h"] = end_of_experiment["PhageR_72h"].fillna(0.)

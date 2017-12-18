@@ -1,2 +1,2 @@
-#%%timeit
-unique_species = survey_data_species[["genus", "species"]].drop_duplicates().dropna()
+df_species_annotated_subset = df_species_annotated[['class', 'kingdom', 'order', 'phylum', 
+                                                    'scientificName', 'status', 'usageKey']]

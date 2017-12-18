@@ -1,3 +1,2 @@
-#%%timeit
-unique_species = \
-    survey_data_species.groupby(["genus", "species"]).first().reset_index()[["genus", "species"]]
+unique_species_annotated = pd.merge(unique_species, df_species_annotated_subset, 
+                                    left_index=True, right_index=True)

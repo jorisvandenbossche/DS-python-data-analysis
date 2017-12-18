@@ -1,1 +1,1 @@
-countries.loc[countries['density'] > 300, ['capital', 'population']]
+countries['density'] = countries['population']*1000000 / countries['area']

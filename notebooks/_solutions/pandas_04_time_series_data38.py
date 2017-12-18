@@ -1,1 +1,1 @@
-data[(data.index.hour > 8) & (data.index.hour < 20)]
+data[data.index.month.isin([4, 5, 6])]

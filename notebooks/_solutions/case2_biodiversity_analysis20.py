@@ -1,1 +1,2 @@
-heatmap_prep_sns = heatmap_prep_plotnine.pivot_table(index='year', columns='month', values='count')
+fig, ax = plt.subplots(figsize=(10, 8))
+ax = sns.heatmap(heatmap_prep_sns, cmap='Reds')

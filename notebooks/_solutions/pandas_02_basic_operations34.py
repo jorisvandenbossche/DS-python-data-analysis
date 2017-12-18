@@ -1,0 +1,1 @@
+df['Fare'] / df['Fare'].mean()

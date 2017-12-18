@@ -1,0 +1,1 @@
+species_data = pd.read_csv("../data/species.csv", sep=";")

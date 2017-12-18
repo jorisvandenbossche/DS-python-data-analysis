@@ -1,1 +1,1 @@
-daily = data['LS06_348'].resample('D').mean() # daily avergaes calculated
+daily = data['LS06_348'].resample('D').mean() # daily averages calculated

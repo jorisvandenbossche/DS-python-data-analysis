@@ -1,1 +1,1 @@
-df['Fare'] / df['Fare'].mean()
+df['Fare'].quantile(0.75)

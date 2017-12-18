@@ -1,1 +1,1 @@
-df['Fare'].hist() #bins=30, log=True
+df['Age'].hist() #bins=30, log=True

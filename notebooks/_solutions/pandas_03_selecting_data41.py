@@ -1,1 +1,1 @@
-inception = cast[cast['title'] == 'Inception']
+len(df[df['Age'] > 70])

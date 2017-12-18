@@ -1,1 +1,1 @@
-df['Survived'].sum()/len(df['Survived'])
+df['Survived'].sum() / len(df['Survived'])

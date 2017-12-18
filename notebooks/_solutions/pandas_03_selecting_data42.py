@@ -1,1 +1,1 @@
-len(inception[inception['n'].isnull()])
+(df['Age'] > 70).sum()

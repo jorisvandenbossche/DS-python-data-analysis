@@ -1,2 +1,1 @@
-countries['density_ratio'] = countries['density'] / countries['density'].mean()
-countries
+countries.loc[countries['density'] > 300, ['capital', 'population']]
