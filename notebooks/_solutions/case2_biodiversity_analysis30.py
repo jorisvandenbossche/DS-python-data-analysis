@@ -1,2 +1,2 @@
-subselection_sex = survey_data.dropna(subset=["sex"])
-#subselection_sex = survey_data[survey_data["sex"].notnull()]
+n_plot_sex = subselection_sex.groupby(["sex", "verbatimLocality"]).size().unstack(level=0)
+n_plot_sex.head()

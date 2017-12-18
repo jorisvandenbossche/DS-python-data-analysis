@@ -1,1 +1,1 @@
-titles[titles.title == 'Treasure Island'].sort_values('year')
+df.loc[df['Sex'] == 'male', 'Age'].mean()

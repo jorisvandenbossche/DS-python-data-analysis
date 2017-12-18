@@ -1,1 +1,1 @@
-survey_data["plot_id"] = survey_data["verbatimLocality"].apply(lambda x: json.loads(x)["plot"])
+heatmap_prep_plotnine.head()

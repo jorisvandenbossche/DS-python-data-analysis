@@ -1,1 +1,1 @@
-survey_data['name'] = survey_data['genus'] + ' ' + survey_data['species']
+survey_data.groupby("name").size().nlargest(8)

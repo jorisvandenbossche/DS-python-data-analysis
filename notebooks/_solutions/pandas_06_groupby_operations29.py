@@ -1,0 +1,1 @@
+cast1990['name'].value_counts().head(10)

@@ -1,1 +1,1 @@
-df.groupby('AgeClass')['Fare'].mean().plot(kind='bar', rot=0)
+titles.groupby('decade').size().plot(kind='bar', color='green')

@@ -1,1 +1,1 @@
-inception = cast[cast['title'] == 'Inception']
+(df['Age'] > 70).sum()

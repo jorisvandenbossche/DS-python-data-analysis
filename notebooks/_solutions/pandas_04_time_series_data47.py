@@ -1,2 +1,1 @@
-data['months'] = data.index.month
-data[data['months'].isin([1, 2, 3])]
+daily.resample('M').agg(['min', 'max']).plot() # monthly minimum and maximum values of these daily averages

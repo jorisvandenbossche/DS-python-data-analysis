@@ -1,0 +1,1 @@
+len(titles[titles['year'] // 10 == 195])

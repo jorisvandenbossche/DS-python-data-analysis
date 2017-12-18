@@ -1,1 +1,0 @@
-len(titles[titles['title'] == 'Hamlet'])

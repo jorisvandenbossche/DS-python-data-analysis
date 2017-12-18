@@ -1,1 +1,1 @@
-titles.sort_values('year').head(2)
+len(titles[titles['title'] == 'Hamlet'])

@@ -1,1 +1,3 @@
-count_weekday_years = survey_data.groupby([survey_data["eventDate"].dt.year, survey_data["eventDate"].dt.dayofweek]).size().unstack()
+year_evolution = survey_data.groupby("taxa").resample('A', on='eventDate').size()
+species_evolution = year_evolution.unstack(level=0)
+axs = species_evolution.plot(subplots=True, figsize=(16, 8), sharey=False)

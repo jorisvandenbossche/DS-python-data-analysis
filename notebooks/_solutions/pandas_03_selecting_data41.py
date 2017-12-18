@@ -1,1 +1,1 @@
-len(titles[titles['year'] // 10 == 195])
+len(df[df['Age'] > 70])

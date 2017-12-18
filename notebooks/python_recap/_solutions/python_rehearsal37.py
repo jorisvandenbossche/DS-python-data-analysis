@@ -1,1 +1,2 @@
-[el for el in dir(list) if not el.startswith('_')]
+#split in words and get word lengths
+[len(word) for word in sentence.split()]

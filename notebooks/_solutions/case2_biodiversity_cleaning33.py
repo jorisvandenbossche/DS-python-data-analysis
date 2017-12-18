@@ -1,1 +1,0 @@
-survey_data_decoupled.groupby("year").size().plot(kind='barh')

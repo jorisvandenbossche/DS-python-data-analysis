@@ -1,1 +1,0 @@
-survey_data_decoupled["measurementOrFact"] = survey_data_decoupled["wgt"].apply(value_to_measurement, args=(["weight in gram"]))

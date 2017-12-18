@@ -1,1 +1,0 @@
-survey_data_decoupled = survey_data_decoupled.drop(["day", "month", "year"], axis=1)

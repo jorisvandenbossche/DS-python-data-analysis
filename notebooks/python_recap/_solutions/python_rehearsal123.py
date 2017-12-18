@@ -1,1 +1,0 @@
-np.sqrt(AR2[AR2 > np.percentile(AR2, 75)])

@@ -1,1 +1,1 @@
-data[data.index.month == 1]
+daily = data['LS06_348'].resample('D').mean() # daily averages calculated

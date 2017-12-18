@@ -1,1 +1,0 @@
-survey_data_decoupled.groupby(survey_data_decoupled["eventDate"].dt.year).size().plot(kind='barh')
