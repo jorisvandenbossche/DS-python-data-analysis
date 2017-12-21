@@ -1,0 +1,1 @@
+data_tidy['no2'].isnull().sum()

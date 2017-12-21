@@ -17,7 +17,8 @@ def read_airbase_file(filename, station):
     
     # construct the column names    
     hours = ["{:02d}".format(i) for i in range(24)]
-    colnames = ['date'] + [item for pair in zip(hours, ['flag']*24) for item in pair]
+    flags = ['flag' + str(i) for i in range(24)]
+    colnames = ['date'] + [item for pair in zip(hours, flags) for item in pair]
     
     # read the actual data
     data = pd.read_csv(filename, sep='\t', header=None, na_values=[-999, -9999], names=colnames)
