@@ -20,10 +20,14 @@ declare -a arr=(
                 #"pandas_07_reshaping_data.ipynb"
                 #"visualization_01_matplotlib.ipynb"
                 #"visualization_02_plotnine.ipynb"
+                "visualization_03_landscape.ipynb"
                 #"case1_bike_count.ipynb"
                 #"case2_biodiversity_processing.ipynb"
                 #"case2_biodiversity_analysis.ipynb"
                 #"case3_bacterial_resistance_lab_experiment"
+
+                #"case4_air_quality_processing.ipynb"
+                #"case4_air_quality_analysis.ipynb"
                 "case4_air_quality_processing.ipynb"
                 "case4_air_quality_analysis.ipynb"
                 )
