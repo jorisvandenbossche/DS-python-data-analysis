@@ -1,2 +1,3 @@
-# group by year and count exceedances (sum of boolean)
-exceedances = exceedances.groupby(exceedances.index.year).sum()
+# using unstack and pandas plotting
+data_weekend_BETR801 = data_weekend['BETR801'].unstack(level=0)
+data_weekend_BETR801.plot()

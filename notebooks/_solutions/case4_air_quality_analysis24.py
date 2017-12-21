@@ -1,3 +1,3 @@
-data_weekend = data.groupby(['weekend', data.index.hour]).mean()
-data_weekend_BETR801 = data_weekend['BETR801'].unstack(level=0)
-data_weekend_BETR801.plot()
+# Groupby wise
+df2011 = data['2011']
+df2011.groupby(df2011.index.week)[['BETN029', 'BETR801']].quantile(0.95).plot()

@@ -25,8 +25,11 @@ declare -a arr=(
                 #"case2_biodiversity_processing.ipynb"
                 #"case2_biodiversity_analysis.ipynb"
                 #"case3_bacterial_resistance_lab_experiment"
+
                 #"case4_air_quality_processing.ipynb"
                 #"case4_air_quality_analysis.ipynb"
+                "case4_air_quality_processing.ipynb"
+                "case4_air_quality_analysis.ipynb"
                 )
 
 
