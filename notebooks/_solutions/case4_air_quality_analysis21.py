@@ -1,3 +1,11 @@
-# Resample wise (not possible to use quantile directly on a resample, so you need a lambda function)
-# Note the different x-axis labels
-df2011[['BETN029', 'BETR801']].resample('W').agg(lambda x: x.quantile(0.75)).plot()
+fig, ax = plt.subplots()
+
+data['1999':].resample('A').mean().plot(ax=ax)
+data['1999':].mean(axis=1).resample('A').mean().plot(color='k', 
+                                            linestyle='--', 
+                                            linewidth=4, 
+                                            ax=ax, 
+                                            label='Overall mean')
+ax.legend(loc='center', ncol=3, 
+          bbox_to_anchor=(0.5, 1.06))
+ax.set_ylabel("NO$_2$ concentration (µg/m³)");

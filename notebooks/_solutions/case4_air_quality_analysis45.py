@@ -1,4 +1,1 @@
-# add a weekday and week column
-data['weekday'] = data.index.weekday
-data['week'] = data.index.week
-data.head()
+subset["weekday"] = subset["weekday"].replace(to_replace={0:"Monday", 6:"Sunday"})

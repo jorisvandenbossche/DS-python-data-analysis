@@ -1,3 +1,3 @@
-exceedances = data.rolling(8).mean().resample('D').max() > 100
-exceedances = exceedances.groupby(exceedances.index.year).sum()
-ax = exceedances.plot(kind='bar')
+subset = data['2009-01'].copy()
+subset["weekday"] = subset.index.weekday
+subset = subset[subset['weekday'].isin([0, 6])]

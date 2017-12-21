@@ -1,1 +1,1 @@
-box = data_pivoted.boxplot()
+exceedances = data.rolling(8).mean().resample('D').max() > 100

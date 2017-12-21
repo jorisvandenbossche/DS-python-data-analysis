@@ -1,1 +1,2 @@
-data['2012'].groupby(['weekday', 'week'])['BETR801'].mean().unstack(level=0).boxplot();
+exceedances = exceedances.groupby(exceedances.index.year).sum()
+ax = exceedances.plot(kind='bar')

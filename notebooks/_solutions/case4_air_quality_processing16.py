@@ -1,2 +1,3 @@
-# rename the remaining column to the name of the measurement station
-data_stacked = data_stacked.rename(columns={0: 'BETR801'})
+# Drop the origal date and hour columns
+data_stacked = data_stacked.drop(['date', 'hour'], axis=1)
+data_stacked.head()

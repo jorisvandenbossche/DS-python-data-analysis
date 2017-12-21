@@ -1,3 +1,2 @@
-# Drop the origal date and hour columns
-data_stacked = data_stacked.drop(['date', 'level_1'], axis=1)
-data_stacked.head()
+# Now we combine the dates and the hours into a datetime, and set this as the index
+data_stacked.index = pd.to_datetime(data_stacked['date'] + data_stacked['hour'], format="%Y-%m-%d%H")

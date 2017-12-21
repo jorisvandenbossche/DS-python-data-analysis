@@ -1,1 +1,2 @@
-exceedances = data > 200
+data_weekend = data.groupby(['weekend', 'hour']).mean()
+data_weekend.head()
