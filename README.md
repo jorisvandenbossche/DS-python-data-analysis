@@ -80,3 +80,6 @@ When the environment is installed, activate the environment inside the terminal/
  
  
 Authors: Joris Van den Bossche, Stijn Van Hoey
+
+<img src="img/logo_flanders+richtingmorgen.png" width="79%"> 
+<img src="img/doctoralschoolsprofiel_hq_rgb_web.png" width="20%"> 
