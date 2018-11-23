@@ -67,8 +67,8 @@ When the environment is installed, activate the environment inside the terminal/
   ```
 
 * Without git: download ZIP from https://github.com/jorisvandenbossche/DS-python-data-analysis (green button "Clone or download")
- 
- 
+
+
 Authors: Joris Van den Bossche, Stijn Van Hoey
 
 <img src="img/logo_flanders+richtingmorgen.png" width="79%"> 
