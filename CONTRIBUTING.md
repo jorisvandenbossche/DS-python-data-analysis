@@ -1,13 +1,10 @@
+---
+layout: default
+---
+
 # Pandas Tutorial - contributing guide
 
 First of all, thanks for considering contributing to the course! 👍 
-
-[repo]: https://github.com/inbo/wateRinfo
-[issues]: https://github.com/inbo/wateRinfo/issues
-[new_issue]: https://github.com/inbo/wateRinfo/issues/new
-[website]: https://inbo.github.io/wateRinfo
-[citation]: https://inbo.github.io/wateRinfo/authors.html
-[email]: mailto:stijn.vanhoey@inbo.be
 
 ## How you can contribute
 
