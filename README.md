@@ -1,74 +1,27 @@
 # Data manipulation, analysis and visualisation in Python
 
-## Specialist course Doctoral schools of Ghent University
+## Introduction
 
-For how to set up a working environment, fetch the course materials and start the notebooks, see the slides: https://jorisvandenbossche.github.io/DS-python-data-analysis/
+This course is intended for researchers that have at least basic programming skills in Python. It targets researchers that want to enhance their general data manipulation and analysis skills in Python. 
 
-
-### Requirements to run this tutorial
-
-Look at the `environment.yml` file for all packages that need to be installed.
-
-### Setting up a working environment
-
-#### Create an environment with Anaconda (for [2])
-
-(*make sure you have a working internet connection*)
-
-Use our [environment.yml](https://github.com/jorisvandenbossche/DS-python-data-analysis/blob/master/environment.yml) file inside the course folder to set up your Python working environment
-
-In a terminal or cmd, navigate to the `DS-python-data-analysis` folder and use the following command:
-
-```
-$ conda env create -f environment.yml
-```
-
-When the environment is installed, activate the environment inside the terminal/cmd:
-
-* Windows-users
-  ```
-  $ activate DS-python-data-analysis
-  ```
-
-* Linux/Mac-users
-  ```
-  $ source activate DS-python-data-analysis
-  ```
-
-#### Starting a Jupyter Notebook
-
-* In the terminal, navigate to the `DS-python-data-analysis` directory if not there already
-
-* Ensure that the correct environment is activated.
-
-* Start a jupyter notebook server with
-
-  ```
-  $ jupyter notebook
-  ```
-
-  This will open a browser window automatically. Use the `notebooks` folder to access the notebooks containing the course material. If you require some rehearsel of python itself (and numpy), check the [python_recap](https://github.com/jorisvandenbossche/DS-python-data-analysis/tree/master/notebooks/python_recap) folder first, otherwise you can directly jump into the `pandas_0x_` notebooks.
-
-#### Getting the course materials
-
-* With using git:
-
-  First time (inside a terminal or cmd):
-
-  ```
-  $ git clone https://github.com/jorisvandenbossche/DS-python-data-analysis.git
-  $ cd DS-python-data-analysis
-  ```
-
-  Updating (on second or third day):
-
-  ```
-  $ git pull
-  ```
-
-* Without git: download ZIP from https://github.com/jorisvandenbossche/DS-python-data-analysis (green button "Clone or download")
+The course does not aim to provide a course in statistics or machine learning. It aims to provide researchers the means to effectively tackle commonly encountered data handling tasks in order to increase the overall efficiency of the research. 
 
 
+## Getting started
+
+The course uses Python 3 and some data analysis packages such as Pandas, Numpy and Matplotlib. To install the required libraries, we highly recommend Anaconda or miniconda (<https://www.continuum.io/downloads>) or another Python distribution that includes the scientific libraries (this recommendation applies to all platforms, so for both Window, Linux and Mac).
+
+For detailed instructions to get started on your local machine , see the [setup instructions](./setup.md).
+
+In case you do not want to install everything and just want to try out the course material, use the environment setup by Binder [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jorisvandenbossche/DS-python-data-analysis/master) and open de notebooks rightaway.
+
+
+## Contributing
+
+Found any typo or have a suggestion, see [how to contribute](./CONTRIBUTING.html).
+
+
+## Meta 
 Authors: Joris Van den Bossche, Stijn Van Hoey
 
 <img src="img/logo_flanders+richtingmorgen.png" width="79%"> 
