@@ -65,16 +65,10 @@ and respond with *Yes* by typing `y`. Output will be printed and if no error occ
 
 **Note:** This can be done as well using the interface of Anaconda Navigator, adding `conda-forge` as channel according to [this tutorial](https://docs.anaconda.com/anaconda/navigator/tutorials/manage-channels/#adding-a-channel) and adding the `plotnine` package using [this tutorial](https://docs.anaconda.com/anaconda/navigator/tutorials/manage-packages/#installing-a-package).
 
-### Test your installation
-
-To check if everything setup properly
-
-to adapt: https://github.com/glemaitre/pyparis-2018-sklearn/blob/master/check_environment.py
-
 
 ## 2. Getting the course materials
 
-### You are a git user?
+### Option 1: You are a git user?
 
 As the course has been setup as a [git](https://git-scm.com/) repository managed on [Github](https://github.com/jorisvandenbossche/DS-python-data-analysis), you can clone the entire course to your local machine:
 
@@ -87,17 +81,28 @@ Use the command line to clone the repository and go into the course folder:
 
 In case you would prefer using Github Desktop, see [this tutorial](https://help.github.com/desktop/guides/contributing-to-projects/cloning-a-repository-from-github-to-github-desktop/).
 
-### You are not a git user?
+### Option 2: You are not a git user?
 
 To download the repository to your local machine as a zip-file, clicj the  `download ZIP` on the repository page https://github.com/jorisvandenbossche/DS-python-data-analysis (green button "Clone or download")
 
 After the download, unzip on the location you prefer within your user account (e.g. `My Documents`, not `C:\`).
 
+### Test your installation
+
+To check if your packages are properly installed, open the Terminal again and navigate to the course directory (see above). Run the `check_environment.py` script:
+
+```
+python check_environments.py
+```
+
+When all is green, you're ready to go!
+
+
 ## 3. Starting Jupyter Notebook
 
 Each of the course modules is setup as a [Jupyter notebook](http://jupyter.org/), an interactive  environment to write and run code. It it no problem if you never used jupyter notebooks before as an introduction to notebooks is part of the course. 
 
-### Using the command line
+### Option 1: Using the command line
 
 * In the terminal, navigate to the `DS-python-data-analysis` directory (downloaded or cloned in the previous section)
 
@@ -109,7 +114,7 @@ Each of the course modules is setup as a [Jupyter notebook](http://jupyter.org/)
 $ jupyter notebook
 ```
 
-### Using Anaconda Navigator
+### Option 2: Using Anaconda Navigator
 
 In the Anaconda Navigator *Home* tab, select the Launch button under the Jupyter notebook icon:
 
