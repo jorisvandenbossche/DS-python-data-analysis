@@ -26,7 +26,7 @@ The course is organized as a three day course with following program:
 
 ## Getting started
 
-The course uses Python 3 and some data analysis packages such as Pandas, Numpy and Matplotlib. To install the required libraries, we highly recommend Anaconda or miniconda (<https://www.continuum.io/downloads>) or another Python distribution that includes the scientific libraries (this recommendation applies to all platforms, so for both Window, Linux and Mac).
+The course uses Python 3 and some data analysis packages such as Pandas, Numpy and Matplotlib. To install the required libraries, we highly recommend Anaconda or miniconda (<https://www.anaconda.com/download/>) or another Python distribution that includes the scientific libraries (this recommendation applies to all platforms, so for both Window, Linux and Mac).
 
 For detailed instructions to get started on your local machine , see the [setup instructions](./setup.md).
 

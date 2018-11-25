@@ -6,10 +6,12 @@ This course is intended for researchers that have at least basic programming ski
 
 The course does not aim to provide a course in statistics or machine learning. It aims to provide researchers the means to effectively tackle commonly encountered data handling tasks in order to increase the overall efficiency of the research. 
 
+The course has been developed as a specialist course for the Doctoral schools of Ghent University, but can be taught to others upon request (and the material is freely available to re-use).
+
 
 ## Getting started
 
-The course uses Python 3 and some data analysis packages such as Pandas, Numpy and Matplotlib. To install the required libraries, we highly recommend Anaconda or miniconda (<https://www.continuum.io/downloads>) or another Python distribution that includes the scientific libraries (this recommendation applies to all platforms, so for both Window, Linux and Mac).
+The course uses Python 3 and some data analysis packages such as Pandas, Numpy and Matplotlib. To install the required libraries, we highly recommend Anaconda or miniconda (<https://www.anaconda.com/download/>) or another Python distribution that includes the scientific libraries (this recommendation applies to all platforms, so for both Window, Linux and Mac).
 
 For detailed instructions to get started on your local machine , see the [setup instructions](./setup.md).
 
