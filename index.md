@@ -4,7 +4,7 @@
 
 The handling of data is a recurrent task for most scientists. Reading in experimental data, checking its properties and creating visualisations may become tedious tasks. Hence, increasing the efficiency in this process is beneficial for many scientists. Spreadsheet based software lacks the ability to properly support this process, due to the lack of automation and repeatability. The usage of a high-level scripting language such as Python is ideal for these tasks. 
 
-This course trains students to use Python effectively to do these tasks. The course focuses on data manipulation and cleaning, explorative analysis and visualisation using some important packages such as Pandas, Numpy and Matplotlib.
+This course trains researchers to use Python effectively to do these tasks. The course focuses on data manipulation and cleaning, explorative analysis and visualisation using some important packages such as Pandas, Numpy and Matplotlib.
 
 The course has been developed as a specialist course for the Doctoral schools of Ghent University, but can be taught to others upon request. 
 
