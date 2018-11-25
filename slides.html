@@ -23,6 +23,12 @@
    .section_background {background-color:#c2c444; color: #fff}
    .day_background {background-color:#ececec; color: #000}
   </style>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
   </head>
   <body>
     <textarea id="source">
@@ -32,7 +38,7 @@ class: center, middle
 # Data manipulation, analysis and visualisation in Python
 
 Specialist course Doctoral schools of Ghent University,<br>
-18-19-21 December 2017
+3-4-5 December 2018
 
 Joris Van den Bossche, Stijn Van Hoey
 
@@ -43,9 +49,9 @@ class: center, middle
 
 # Who are you?
 
-Go to https://hackmd.io/s/SyxYEr4Mf
+Go to https://hackmd.io/cg1kUarBTCKcQNea09EYXw
 
-<iframe src="https://hackmd.io/s/SyxYEr4Mf#who-am-i" height="400px" width="800px"></iframe>
+<iframe src="https://hackmd.io/cg1kUarBTCKcQNea09EYXw#who-am-i" height="400px" width="800px"></iframe>
 
 ---
 
@@ -87,77 +93,7 @@ class: middle, section_background
 
 ## Setting up a working environment
 
-* Working on a PC from the computer room [1]:
-
-  * Open the "Jupyter Notebook" app on https://athena.ugent.be/
-  * Start a Terminal: `New` (upper right) > `Terminal`
-
-* Working on your own laptop [2]
-
----
-## Getting the course materials
-
-* With using git ([1] and recommended for [2])
-
-  First time (inside a terminal or cmd):
-
-  ```
-$ git clone https://github.com/jorisvandenbossche/DS-python-data-analysis.git
-$ cd DS-python-data-analysis
-  ```
-
-  Updating (on second or third day):
-
-  ```
-  $ git pull
-  ```
-
-* Without git for [2]: download ZIP from https://github.com/jorisvandenbossche/DS-python-data-analysis (green button "Clone or download")
-
----
-
-## Create an environment with Anaconda (for [2])
-(*make sure you have a working internet connection*)
-
-Use our [environment.yml](https://github.com/jorisvandenbossche/DS-python-data-analysis/blob/master/environment.yml) file inside the course folder to set up your Python working environment
-
-In a terminal or cmd, navigate to the `DS-python-data-analysis` folder and use the following command:
-
-```
-$ conda env create -f environment.yml
-```
-
----
-
-## Create an environment with Anaconda (for [2])
-(*make sure you have a working internet connection*)
-
-When the environment is installed, activate the environment inside the terminal/cmd:
-
-* Windows-users
-```
-$ activate DS-python-data-analysis
-```
-
-* Linux/Mac-users
-```
-$ source activate DS-python-data-analysis
-```
-
----
-## Starting a Jupyter Notebook (for [2])
-
-* In the terminal, navigate to the `DS-python-data-analysis` directory if not there already
-
-* Ensure that the correct environment is activated.
-
-* Start a jupyter notebook server with
-
-  ```
-$ jupyter notebook
-  ```
-
-  This will open a browser window automatically.
+For the setup instructions, see https://github.com/jorisvandenbossche/DS-python-data-analysis/blob/master/setup.md
 
 ---
 class: center, middle
@@ -226,27 +162,11 @@ class: center, middle
 
 ---
 
-## …OPEN SOURCE
-* No license costs!
-
----
-
 ## …WIDESPREAD
 * Large world-wide community ensures **fast development**
 * Used in **scientific** and non-scientific institutes <br> (Google, NASA, ESRI, VMM,...)
 * Python is a standard in **GIS** <br> (commercial and non-commercial tools)
 * **Multiplatform** (linux, windows,…)
-
----
-
-## …READABLE
-
-.center[
-```
-It's easy to learn, easy to read and fast to develop
-```
-]
-<br><br><br>
 
 ---
 
@@ -260,13 +180,19 @@ what did you/I clicked a few months ago?’-style WYSISYG
 ```
 ]
 
----
+--
 
 ## …MULTI-FUNCTIONAL
 
 * Research and development: the python *scientific ecosystem*
+* Webdevelopment (Django, Flask)
 * Daily use: great as ducttape/glue
 * **Automation** of time-consuming returning tasks
+
+--
+
+## …OPEN SOURCE
+* No license costs!
 
 ---
 
@@ -276,21 +202,6 @@ what did you/I clicked a few months ago?’-style WYSISYG
 * For hard number-crunching stuff, NOT the fastest solution
 * R, Fortran, C++ etc are also ‘widespread’, so python is just a language amongst the others
 * Risk of getting lost in the forest/flood of ‘useful packages’
-
----
-class: middle, section_background
-
-# Installing Python
-
----
-
-# Installing Python
-
-We **recommend Anaconda Distribution**, a Python distribution (= Python + most used packages) that targets (data) scientists: https://www.anaconda.com/download/
-
-But alternatives: download from python.org/downloads/ and install packages with `pip`, other distributions such as Enthought Canopy, ..
-
-The Anaconda Distribution comes with the **conda package manager**
 
 ---
 
@@ -351,24 +262,6 @@ class: center, middle
 
 ```
 conda env export > environment.yml
-```
-
----
-
-## Summary for this course
-
-When starting the day:
-
-```
-# navigate to the course materials in a terminal
-cd .../DS-python-data-analysis
-
-# activate the environment for this course
-source activate DS-python-data-analysis   # Linux / macros
-activate DS-python-data-analysis          # Windows
-
-# start the notebook
-jupyter notebook
 ```
 
 ---
@@ -436,6 +329,8 @@ class: middle, center
 
 Report bugs, typo's, suggestions... as issues ([New issue](https://github.com/jorisvandenbossche/DS-python-data-analysis/issues/new))
 
+or see the [contributing guidelines](https://github.com/jorisvandenbossche/DS-python-data-analysis/blob/master/CONTRIBUTING.md)
+
 ---
 class: middle, section_background
 
@@ -446,13 +341,6 @@ class: middle
 
 1. `python_recap/00-jupyter_introduction.ipynb`
 2. `python_recap/python_rehearsal.ipynb`
-
----
-
-## On snake (for [1]): need to change the kernel
-
-.center[
-![:scale 70%](img/change_kernel.png)]
 
 ---
 class: middle, section_background
@@ -500,8 +388,6 @@ Pandas is great for working with heterogeneous and tabular 1D/2D data, but not a
 * When working with multidimensional labeled data (e.g. climate data): have a look at [xarray](http://xarray.pydata.org/en/stable/)
 
 
-
-
 ---
 
 ## Key features
@@ -540,28 +426,6 @@ class: middle, day_background
 8. *Case study:* Bacterial resistance lab study
 
 ---
-
-## When starting the day:
-
-```
-# navigate to the course materials in a terminal
-cd /path/to/your/coursenotes/DS-python-data-analysis
-
-# activate the environment for this course
-source activate DS-python-data-analysis   # Linux / macros
-activate DS-python-data-analysis          # Windows
-
-# start the notebook
-jupyter notebook
-```
-<br><br>
-
-1. **Read**: Combining data with Pandas: `pandas_05_combining_datasets.ipynb`
-2. **Start with** *Case study:* Bike count: <br>
-`case1_bike_count.ipynb`
-
-
----
 class: middle, day_background
 
 # Overview of the third day
@@ -589,25 +453,6 @@ git pull
 
 * Without git: [download ZIP](https://github.com/jorisvandenbossche/DS-python-data-analysis/archive/master.zip)
 
-
-### Activate your environment:
-
-.medium[
-```
-activate DS-python-data-analysis            # Windows
-source activate DS-python-data-analysis     # Linux, Max
-```
-]
-
-### Then, in the same terminal / command line, start:
-
-.medium[
-```
-jupyter notebook
-```
-]
-
-
 ---
 class: center, middle
 
@@ -617,6 +462,7 @@ class: center, middle
 
 
 ### https://goo.gl/forms/aQggZSh4l9GSaBtM2
+
 
 Please fill in the questionnaire!
 
@@ -678,7 +524,7 @@ background-size: cover
 ---
 class: center, middle
 
-###Reading advice
+### Reading advice
 
 [Good Enough Practices in Scientific Computing](https://arxiv.org/pdf/1609.00037v1.pdf)
 
