@@ -39,7 +39,7 @@ Care to fix issues or typo's? Awesome! 👏
 Some notes to take into account:
 
 - When updating course material, **edit the 'solved' notebooks**, the other ones (the ones used in the tutorial) are generated automatically using the `convert_notebooks.sh` script.
-- the exercises are cleared using the `nbtutor` notebook extension: https://github.com/jorisvandenbossche/nbtutor
+- the exercises are cleared using the `nbtutor` notebook extension: <https://github.com/jorisvandenbossche/nbtutor>
 
 
 
