@@ -32,6 +32,10 @@ For detailed instructions to get started on your local machine , see the [setup 
 
 In case you do not want to install everything and just want to try out the course material, use the environment setup by Binder [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jorisvandenbossche/DS-python-data-analysis/master) and open de notebooks rightaway.
 
+## Slides
+
+For the course slides, click [here](https://jorisvandenbossche.github.io/DS-python-data-analysis/slides.html).
+
 
 ## Contributing
 
