@@ -94,7 +94,7 @@ After the download, unzip on the location you prefer within your user account (e
 To check if your packages are properly installed, open the Terminal again and navigate to the course directory (see above). Run the `check_environment.py` script:
 
 ```
-python check_environments.py
+python check_environment.py
 ```
 
 When all is green, you're ready to go!
