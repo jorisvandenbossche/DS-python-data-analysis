@@ -50,16 +50,16 @@ print(sys.version)
 pyversion = Version(sys.version)
 if pyversion >= "3":
     if pyversion < "3.6":
-        print(FAIL, "Python version 3.5 (or 2.7) is required,"
+        print(FAIL, "Python version 3.6 is required,"
                     " but %s is installed." % sys.version)
 else:
     print(FAIL, "Python 3 is required, but %s is installed." % sys.version)
 
 print()
-requirements = {'numpy': "1.9",'matplotlib': "2.0",
-                'pandas': "0.21", 'notebook': "5",
-                'plotnine': '0.3.0', 
-                'pyproj': '1.9.5.1', 'requests': '2.18.0', 
+requirements = {'numpy': "1.9", 'matplotlib': "2.0",
+                'pandas': "0.23", 'notebook': "5",
+                'plotnine': '0.5',
+                'pyproj': '1.9.5.1', 'requests': '2.18.0',
                 'seaborn': '0.9.0', 'xlrd': '1.1.0'}
 
 # now the dependencies
