@@ -1,1 +1,0 @@
-df['north'].nlargest(10)

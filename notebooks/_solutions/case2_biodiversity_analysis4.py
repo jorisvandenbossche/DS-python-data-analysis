@@ -1,1 +1,1 @@
-survey_data_processed.info()
+sum(survey_data_processed['species'].isnull())

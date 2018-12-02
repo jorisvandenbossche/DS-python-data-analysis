@@ -1,0 +1,1 @@
+df = pd.read_csv("../data/titanic.csv")

@@ -1,3 +1,3 @@
-titles['decade'] = titles['year'] // 10 * 10
-hamlet = titles[titles['title'].str.contains('Hamlet')]
-hamlet.groupby('decade').size().plot(kind='bar', color="lightblue")
+#sums_decade.groupby(level='year').transform(lambda x: x / x.sum())
+ratios_decade = sums_decade / sums_decade.groupby(level='year').transform('sum')
+ratios_decade

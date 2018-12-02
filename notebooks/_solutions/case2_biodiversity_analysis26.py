@@ -1,2 +1,2 @@
-fig, ax = plt.subplots(figsize=(8,8))
-sns.heatmap(species_per_plot, ax=ax, cmap='Reds')
+n_plot_sex = subselection_sex.groupby(["sex", "verbatimLocality"]).size().unstack(level=0)
+n_plot_sex.head()

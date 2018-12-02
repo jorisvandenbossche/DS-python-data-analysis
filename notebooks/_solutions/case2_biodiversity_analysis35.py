@@ -1,1 +1,2 @@
-non_rodent_species = survey_data[survey_data['taxa'].isin(['Rabbit', 'Bird', 'Reptile'])]
+species_evolution = month_evolution.unstack(level=0)
+axs = species_evolution.plot(subplots=True, figsize=(14, 8), sharey=True)

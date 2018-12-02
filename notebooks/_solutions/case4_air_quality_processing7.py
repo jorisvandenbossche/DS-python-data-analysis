@@ -1,2 +1,2 @@
-data = pd.read_csv("../data/BETR8010000800100hour.1-1-1990.31-12-2012",
-                   sep='\t', header=None, names=column_names, na_values=[-999, -9999])
+# Now we combine the dates and the hours into a datetime, and set this as the index
+data_stacked.index = pd.to_datetime(data_stacked['date'] + data_stacked['hour'], format="%Y-%m-%d%H")

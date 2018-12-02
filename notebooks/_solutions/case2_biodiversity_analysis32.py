@@ -1,4 +1,4 @@
-(pn.ggplot(subselection_sex, pn.aes(x="verbatimLocality", fill="sex"))
-     + pn.geom_bar(position='dodge')
-     + pn.scale_x_discrete(breaks=np.arange(1, 25, 1), limits=np.arange(1, 25, 1))
-)
+fig, ax = plt.subplots()
+merriami.groupby(merriami['eventDate'].dt.year).size().plot(ax=ax)
+ax.set_xlabel("")
+ax.set_ylabel("number of occurrences")

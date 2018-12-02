@@ -1,4 +1,3 @@
-(pn.ggplot(tidy_experiment, pn.aes(x='experiment_time_h', 
-                                   y='optical_density'))
-    + pn.geom_violin()
-)
+density_mean = (tidy_experiment
+                .groupby(['Bacterial_genotype','Phage_t', 'experiment_time_h'])
+                .mean().reset_index())

@@ -1,1 +1,2 @@
-survey_data['name'] = survey_data['genus'] + ' ' + survey_data['species']
+fig, ax = plt.subplots(figsize=(8,8))
+sns.heatmap(species_per_plot, ax=ax, cmap='Reds')

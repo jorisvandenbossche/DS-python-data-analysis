@@ -1,1 +1,1 @@
-sum(survey_data_processed['species'].isnull())
+sum(survey_data_processed.duplicated())

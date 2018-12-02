@@ -1,0 +1,1 @@
+np.log(df['Fare'])

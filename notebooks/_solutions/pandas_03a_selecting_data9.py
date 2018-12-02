@@ -1,0 +1,1 @@
+df[df['Surname'].str.len() > 15]

@@ -1,1 +1,0 @@
-combined_data = pd.concat(dfs, axis=1)

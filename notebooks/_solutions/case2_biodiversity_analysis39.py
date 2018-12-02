@@ -1,1 +1,1 @@
-non_bird_species = survey_data[survey_data['taxa'] != 'Bird']
+count_weekday_years = survey_data.groupby([survey_data["eventDate"].dt.year, survey_data["eventDate"].dt.dayofweek]).size().unstack()

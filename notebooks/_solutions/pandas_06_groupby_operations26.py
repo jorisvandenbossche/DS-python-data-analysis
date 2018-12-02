@@ -1,3 +1,3 @@
-titles['decade'] = titles['year'] // 10 * 10
-hamlet = titles[titles['title'] == 'Hamlet']
-hamlet.groupby('decade').size().plot(kind='bar', color="orange")
+leading = cast[cast['n'] == 1]
+sums_decade = leading.groupby([cast['year'] // 10 * 10, 'type']).size()
+sums_decade

@@ -1,2 +1,2 @@
-mask = pd.to_datetime(survey_data_decoupled[["year", "month", "day"]], errors='coerce').isnull()
-survey_data_decoupled.loc[mask, "day"] = 30
+df_species_annotated_subset = df_species_annotated[['class', 'kingdom', 'order', 'phylum', 
+                                                    'scientificName', 'status', 'usageKey']]

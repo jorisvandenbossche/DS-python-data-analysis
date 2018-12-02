@@ -1,1 +1,1 @@
-survey_data_processed.head()
+survey_data_processed.info()

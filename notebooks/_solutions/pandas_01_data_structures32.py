@@ -1,1 +1,0 @@
-countries.sort_values(by='population', ascending=False)

@@ -1,1 +1,1 @@
-df.index = pd.to_datetime(combined, dayfirst=True)
+df = df.rename(columns={'ri Centrum': 'direction_centre', 'ri Mariakerke':'direction_mariakerke'})

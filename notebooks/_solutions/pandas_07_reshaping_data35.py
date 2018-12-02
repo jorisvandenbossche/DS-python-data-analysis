@@ -1,1 +1,0 @@
-df.groupby(['Pclass', 'Sex'])['Survived'].mean().unstack()

@@ -1,1 +1,1 @@
-df.head()
+len(df)

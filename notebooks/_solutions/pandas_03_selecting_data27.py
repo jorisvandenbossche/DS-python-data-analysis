@@ -1,1 +1,0 @@
-countries[countries['capital'].str.len() > 7]

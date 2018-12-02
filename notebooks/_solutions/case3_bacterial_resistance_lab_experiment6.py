@@ -1,4 +1,1 @@
-(pn.ggplot(tidy_experiment, pn.aes(x='optical_density'))
-    + pn.geom_histogram(bins=30, color='white', fill='lightgrey')
-    + pn.theme_bw()
-)
+tidy_experiment.groupby(['Bacterial_genotype', 'experiment_time_h'])['optical_density'].mean().unstack()

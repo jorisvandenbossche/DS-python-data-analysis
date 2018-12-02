@@ -1,1 +1,1 @@
-df = pd.read_csv(link, sep=';')
+df.tail()

@@ -1,1 +1,2 @@
-data_tidy = data_tidy.dropna()
+data_weekend = data.groupby(['weekend', 'hour']).mean()
+data_weekend.head()

@@ -1,5 +1,2 @@
-sex_dict = {"M": "male",
-            "F": "female",
-            "R": "male",
-            "P": "female",
-            "Z": np.nan}
+mask = pd.to_datetime(survey_data_decoupled[["year", "month", "day"]], errors='coerce').isnull()
+trouble_makers = survey_data_decoupled[mask]

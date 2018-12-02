@@ -1,3 +1,2 @@
-# Groupby wise
-df2011 = data['2011']
-df2011.groupby(df2011.index.week)[['BETN029', 'BETR801']].quantile(0.95).plot()
+FR_station = data['FR04012'] # select the specific data series
+FR_station = FR_station[(FR_station.notnull()) & (FR_station != 0.0)]  # exclude the Nan and zero values

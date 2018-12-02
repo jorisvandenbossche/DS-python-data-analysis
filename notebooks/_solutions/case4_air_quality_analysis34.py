@@ -1,1 +1,1 @@
-data[['BETR801', 'BETN029', 'FR04037', 'FR04012']].corr()
+data_daily = data.resample('D').mean()

@@ -1,1 +1,2 @@
-cast1990['name'].value_counts().head(10)
+t = titles
+t.year.value_counts().head(3)

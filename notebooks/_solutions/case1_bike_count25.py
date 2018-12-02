@@ -1,1 +1,2 @@
-df3 = df3[~df3.index.duplicated()]
+newyear.plot()
+newyear.rolling(10, center=True).mean().plot(linewidth=2)

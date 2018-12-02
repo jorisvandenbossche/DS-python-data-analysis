@@ -1,6 +1,5 @@
-# with plotnine
-data_tidy_subset = data_tidy[(data_tidy['datetime'] >= "2011-01") & (data_tidy['datetime'] < "2011-09")]
-
-(pn.ggplot(data_tidy_subset, pn.aes(x='station', y='no2'))
-    + pn.geom_violin()
-    + pn.ylab("NO$_2$ concentration (µg/m³)"))
+# when still having multiple factors, it becomes useful to convert to tidy dataset and use plotnine
+(pn.ggplot(data_weekend_tidy,
+           pn.aes(x='hour', y='no2', color='weekend'))
+    + pn.geom_line()
+    + pn.facet_wrap('station'))

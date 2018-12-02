@@ -1,1 +1,0 @@
-df3 = df3[~df3.index.duplicated()]

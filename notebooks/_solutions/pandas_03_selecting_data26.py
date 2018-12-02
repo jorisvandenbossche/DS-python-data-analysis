@@ -1,1 +1,0 @@
-countries[countries['capital'].str.contains('am')]

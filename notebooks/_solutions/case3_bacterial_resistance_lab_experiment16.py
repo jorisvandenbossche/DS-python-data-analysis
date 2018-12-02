@@ -1,1 +1,0 @@
-end_of_experiment = tidy_experiment[tidy_experiment["experiment_time_h"] == "OD_72h"].copy()

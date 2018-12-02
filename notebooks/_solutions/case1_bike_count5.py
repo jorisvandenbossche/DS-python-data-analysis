@@ -1,1 +1,1 @@
-df.tail()
+df.dtypes

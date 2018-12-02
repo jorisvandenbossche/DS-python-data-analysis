@@ -1,1 +1,1 @@
-survey_data_processed[survey_data_processed.duplicated(keep=False)].sort_values(["eventDate", "verbatimLocality"]).head(10)
+survey_data_unique = survey_data_processed.drop_duplicates()

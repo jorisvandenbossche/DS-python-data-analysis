@@ -1,1 +1,0 @@
-df.index = pd.to_datetime(combined, dayfirst=True)

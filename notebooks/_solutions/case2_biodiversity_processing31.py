@@ -1,2 +1,2 @@
-survey_data_decoupled.loc[pd.to_datetime(survey_data_decoupled[["year", "month", "day"]], 
-                                         errors='coerce').isnull(), "day"] = 30
+unique_species_annotated = pd.merge(unique_species, df_species_annotated_subset, 
+                                    left_index=True, right_index=True)

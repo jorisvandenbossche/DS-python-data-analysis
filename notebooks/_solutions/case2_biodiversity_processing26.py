@@ -1,2 +1,2 @@
-mask = pd.to_datetime(survey_data_decoupled[["year", "month", "day"]], errors='coerce').isnull()
-trouble_makers = survey_data_decoupled[mask]
+#%%timeit
+unique_species = survey_data_species[["genus", "species"]].drop_duplicates().dropna()

@@ -1,4 +1,2 @@
-heatmap_prep_plotnine = survey_data.groupby([survey_data['eventDate'].dt.year, 
-                                             survey_data['eventDate'].dt.month]).size()
-heatmap_prep_plotnine.index.names = ["year", "month"]
-heatmap_prep_plotnine = heatmap_prep_plotnine.reset_index(name='count')
+fig, ax = plt.subplots(figsize=(10, 8))
+ax = sns.heatmap(heatmap_prep_sns, cmap='Reds')

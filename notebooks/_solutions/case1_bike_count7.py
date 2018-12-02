@@ -1,1 +1,1 @@
-df.dtypes
+df.index = pd.to_datetime(combined, format="%d/%m/%Y %H:%M")

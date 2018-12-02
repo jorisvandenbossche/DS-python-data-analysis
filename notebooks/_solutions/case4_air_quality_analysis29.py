@@ -1,3 +1,3 @@
-# using unstack and pandas plotting
-data_weekend_BETR801 = data_weekend['BETR801'].unstack(level=0)
-data_weekend_BETR801.plot()
+subset = data['2009-01'].copy()
+subset["weekday"] = subset.index.weekday
+subset = subset[subset['weekday'].isin([0, 6])]

@@ -1,2 +1,1 @@
-subselection_sex = survey_data.dropna(subset=["sex"])
-#subselection_sex = survey_data[survey_data["sex"].notnull()]
+r_species = survey_data[survey_data['taxa'].str.lower().str.startswith('ro')]

@@ -1,0 +1,1 @@
+survey_data["sex_char"].unique().tolist()

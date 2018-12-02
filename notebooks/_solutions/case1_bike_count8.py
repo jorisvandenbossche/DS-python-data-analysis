@@ -1,2 +1,1 @@
-combined = df['dag'] + ' ' + df['tijdstip']
-combined.head()
+df = df.drop(['datum', 'tijd'], axis=1)

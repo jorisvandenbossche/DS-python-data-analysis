@@ -1,4 +1,7 @@
-survey_data_decoupled = solve_double_field_entry(survey_data.copy(), 
-                                                 "and", 
-                                                 column="species") # get help of the function by CTRL + TAB
-# REMARK: the copy() statement here (!)
+def transform_utm_to_wgs(row):
+    """
+    Converts the x and y coordinates of this row into a Series of the
+    longitude and latitude.
+    
+    """
+    return pd.Series(pyproj.transform(utm12n, wgs84, row['xutm'], row['yutm']))

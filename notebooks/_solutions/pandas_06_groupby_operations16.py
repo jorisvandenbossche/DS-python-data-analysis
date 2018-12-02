@@ -1,1 +1,2 @@
-df.groupby('AgeClass')['Fare'].mean().plot(kind='bar', rot=0, color="C0")
+pd.options.display.max_colwidth = 210
+titles.loc[title_longest.index]

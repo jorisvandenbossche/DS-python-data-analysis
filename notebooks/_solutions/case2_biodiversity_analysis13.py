@@ -1,1 +1,1 @@
-survey_data = survey_data_unique.dropna(subset=['species']).copy()
+heatmap_prep_plotnine.head()

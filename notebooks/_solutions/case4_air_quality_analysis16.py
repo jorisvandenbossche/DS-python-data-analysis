@@ -1,5 +1,3 @@
-fig, ax = plt.subplots()
-data.loc['2009':, 'FR04037'].resample('M').mean().plot(ax=ax, label='mean')
-data.loc['2009':, 'FR04037'].resample('M').median().plot(ax=ax, label='median')
-ax.legend(ncol=2)
-ax.set_title("FR04037");
+# using unstack and pandas plotting
+data_weekend_BETR801 = data_weekend['BETR801'].unstack(level=0)
+data_weekend_BETR801.plot()

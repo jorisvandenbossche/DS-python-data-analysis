@@ -1,0 +1,1 @@
+subset.resample('M').agg(['mean', 'median']).plot()

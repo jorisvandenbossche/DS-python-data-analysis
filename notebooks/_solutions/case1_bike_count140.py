@@ -1,1 +1,0 @@
-df = df.rename(columns={'noord': 'north', 'zuid':'south', 'actief': 'active'})

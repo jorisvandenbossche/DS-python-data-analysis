@@ -1,4 +1,5 @@
-# with seaborn
-fig, ax = plt.subplots()
-sns.violinplot(data=data['2011-01': '2011-08'], palette="GnBu_d", ax=ax)
-ax.set_ylabel("NO$_2$ concentration (µg/m³)")
+# tidy dataset that still includes all stations
+
+data_weekend_tidy = pd.melt(data_weekend.reset_index(), id_vars=['weekend', 'hour'],
+                            var_name='station', value_name='no2')
+data_weekend_tidy.head()

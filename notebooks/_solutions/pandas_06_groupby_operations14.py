@@ -1,1 +1,2 @@
-df.groupby('Pclass')['Survived'].mean().plot(kind='bar', color="C0") #and what if you would compare the total number of survivors?
+hamlets = titles[titles['title'].str.startswith('Hamlet')]
+hamlets['title'].value_counts()

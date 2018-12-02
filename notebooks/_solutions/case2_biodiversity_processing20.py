@@ -1,1 +1,1 @@
-survey_data_decoupled["occurrenceID"] = np.arange(1, len(survey_data_decoupled) + 1, 1)
+plot_data_selection = plot_data[["plot", "decimalLongitude", "decimalLatitude"]]
