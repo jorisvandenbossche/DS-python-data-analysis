@@ -1,0 +1,1 @@
+[location.lower() for location in locations]
