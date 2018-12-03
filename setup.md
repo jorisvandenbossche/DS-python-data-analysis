@@ -58,7 +58,9 @@ As the `plotnine` package we will use in the course is not provided by default a
 Type following command + ENTER-button (make sure you have an internet connection):
 
 ```
+conda install pyproj
 conda install -c conda-forge plotnine
+conda install -c conda-forge mplleaflet
 ```
 
 and respond with *Yes* by typing `y`. Output will be printed and if no error occurs, you should have the plotnine package installed.
