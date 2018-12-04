@@ -1,1 +1,1 @@
-transform_utm_to_wgs(plot_data.loc[0])
+plot_data.apply(transform_utm_to_wgs, axis=1)

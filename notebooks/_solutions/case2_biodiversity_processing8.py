@@ -1,1 +1,2 @@
-survey_data_decoupled["occurrenceID"] = np.arange(1, len(survey_data_decoupled) + 1, 1)
+mask = pd.to_datetime(survey_data_decoupled[["year", "month", "day"]], errors='coerce').isnull()
+trouble_makers = survey_data_decoupled[mask]

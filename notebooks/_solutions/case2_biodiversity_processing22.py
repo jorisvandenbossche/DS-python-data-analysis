@@ -1,1 +1,1 @@
-species_data = pd.read_csv("../data/species.csv", sep=";")
+species_data.loc[species_data["species_id"] == "NE", "species_id"] = "NA"

@@ -1,2 +1,2 @@
-df_species_annotated_subset = df_species_annotated[['class', 'kingdom', 'order', 'phylum', 
-                                                    'scientificName', 'status', 'usageKey']]
+unique_species_annotated = pd.merge(unique_species, df_species_annotated_subset, 
+                                    left_index=True, right_index=True)
