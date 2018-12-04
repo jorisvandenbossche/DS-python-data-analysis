@@ -4,4 +4,7 @@ def transform_utm_to_wgs(row):
     longitude and latitude.
     
     """
+    utm12n = pyproj.Proj("+init=EPSG:32612")
+    wgs84 = pyproj.Proj("+init=EPSG:4326")
+    
     return pd.Series(pyproj.transform(utm12n, wgs84, row['xutm'], row['yutm']))
