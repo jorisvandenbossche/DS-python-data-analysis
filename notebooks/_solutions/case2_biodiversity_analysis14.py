@@ -1,4 +1,4 @@
-(pn.ggplot(heatmap_prep_plotnine, pn.aes(x="month", y="year", fill="count"))
+(pn.ggplot(heatmap_prep_plotnine, pn.aes(x="factor(month)", y="year", fill="count"))
     + pn.geom_tile()
     + pn.scale_fill_cmap("Reds")
     + pn.scale_y_reverse()
