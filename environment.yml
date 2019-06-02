@@ -5,11 +5,11 @@ channels:
 dependencies:
 - ipython
 - jupyter
-- matplotlib>2
+- matplotlib>3
 - mplleaflet
 - notebook
 - numpy
-- pandas=0.23
+- pandas=0.24
 - plotnine=0.5
 - pyproj
 - python=3.7
