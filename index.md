@@ -20,9 +20,9 @@ The course does not aim to provide a course in statistics or machine learning. I
 
 The course is organized as a three day course with following program:
 
-- **Day 1** - Basic concepts and introduction to Pandas: Some essential concepts of the Python computing language are rehearsed. Setting up the programming environment with the required packages using the conda package manager and an introduction of the Jupyter notebook environment are covered. The day closes with an introduction to the data analysis package Pandas.
-- **Day 2** - Advanced Pandas: The usage of Pandas for different data cleaning and manipulation tasks is taught and the acquired skills will immediately be brought into practice to handle real-world data sets. Besides, the automation of these tasks as a reusable function or module will be tackled. Applications include time series handling, categorical data, merging data, ...
-- **Day 3** - Combining Pandas and Matplotlib: The process of data cleaning is combined with the creation of plots for data exploration.  Essential functionalities of Matplotlib are taught and directly applied. 
+- **Day 1** - Basic concepts and introduction to Pandas: Some essential concepts of the Python computing language are rehearsed. Setting up the programming environment with the required packages using the conda package manager and an introduction of the Jupyter notebook environment are covered. The day closes with an introduction to the fundamentals of the data analysis package Pandas.
+- **Day 2** - Advanced Pandas: The usage of Pandas for different data cleaning and manipulation tasks is taught and the acquired skills will immediately be brought into practice to handle real-world data sets. Applications include time series handling, categorical data, merging data,... During this day, an introduction to the plotting libraries matplotlib and plotnine is given and brought into practice as well.
+- **Day 3** - Applying Pandas in the real world: Using different use cases, the process of data cleaning and analysis is combined with the creation of plots for data exploration. The day closes with a discussion on the scientific Python ecosystem and visualisation landscape.
 
 ## Getting started
 
