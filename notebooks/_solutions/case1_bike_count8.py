@@ -1,1 +1,1 @@
-df = df.drop(['datum', 'tijd'], axis=1)
+df = df.drop(columns=['datum', 'tijd'])

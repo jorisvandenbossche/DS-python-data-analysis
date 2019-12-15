@@ -1,1 +1,1 @@
-daily.resample('M').agg(['min', 'max']).plot() # monthly minimum and maximum values of these daily averages
+data['2013'].mean().plot(kind='barh')

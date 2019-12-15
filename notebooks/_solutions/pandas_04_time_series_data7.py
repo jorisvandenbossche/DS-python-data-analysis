@@ -1,1 +1,1 @@
-subset.resample('M').agg(['mean', 'median']).plot()
+daily = data['LS06_348'].resample('D').mean() # daily averages calculated
