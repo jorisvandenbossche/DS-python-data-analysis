@@ -20,5 +20,5 @@ def barometric_formula(pressure_sea_level, height=2500):
     gravit_acc = 9.81
     molar_mass_earth = 0.02896
     
-    pressure_altitude = pressure_hPa * math.exp(-gravit_acc * molar_mass_earth* height/(gas_constant*standard_temperature))
+    pressure_altitude = pressure_sea_level * math.exp(-gravit_acc * molar_mass_earth* height/(gas_constant*standard_temperature))
     return pressure_altitude

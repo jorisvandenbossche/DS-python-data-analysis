@@ -1,2 +1,1 @@
-AR3[np.isclose(AR3, -99)] = np.nan
-AR3
+[location.lower() for location in locations]

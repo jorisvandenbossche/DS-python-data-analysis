@@ -1,5 +1,6 @@
 # run this from the the top-level directory
-# will copy the generated notebooks and solutions into the /notebooks dir
+# it creates there a notebooks/ and _solved/solutions/ dir
+# that get automatically copied to the correct places
 
 declare -a arr=(
                 #"00-jupyter_introduction.ipynb"
@@ -37,7 +38,7 @@ echo "- Converting notebooks"
 for i in "${arr[@]}"
 do
    echo "--" "$i"
-   jupyter nbconvert --to=notebook --config ../nbconvert_config.py --output "notebooks/$i" "$i"   
+   jupyter nbconvert --to=notebook --config ../nbconvert_config.py --output "notebooks/$i" "$i"
 done
 
 echo "- Copying converted notebooks and solutions"

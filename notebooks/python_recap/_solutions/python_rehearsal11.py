@@ -1,1 +1,2 @@
-np.sqrt(AR2[AR2 > np.percentile(AR2, 75)])
+AR3[np.isclose(AR3, -99)] = np.nan
+AR3

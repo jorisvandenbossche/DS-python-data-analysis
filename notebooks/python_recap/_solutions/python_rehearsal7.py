@@ -1,1 +1,1 @@
-np_pressures_hPa * math.exp(-gravit_acc * molar_mass_earth* height/(gas_constant*standard_temperature))
+sum(AR > 10)

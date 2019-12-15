@@ -1,1 +1,1 @@
-sum(survey_data_processed['species'].isnull())
+survey_data_processed['species'].isnull().sum()
