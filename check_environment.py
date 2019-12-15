@@ -20,7 +20,7 @@ except:
 try:
     import importlib
 except ImportError:
-    print(FAIL, "Python version 3.4 (or 2.7) is required,"
+    print(FAIL, "Python version 3.4 is required,"
                 " but %s is installed." % sys.version)
 
 
@@ -57,8 +57,8 @@ else:
 
 print()
 requirements = {'numpy': "1.9", 'matplotlib': "2.0",
-                'pandas': "0.23", 'notebook': "5",
-                'plotnine': '0.5',
+                'pandas': "0.25", 'notebook': "5",
+                'plotnine': '0.6',
                 'pyproj': '1.9.5.1', 'requests': '2.18.0',
                 'seaborn': '0.9.0', 'xlrd': '1.1.0'}
 
