@@ -1,2 +1,1 @@
-pressures_hPa_adjusted = [barometric_formula(pressure, 3000) for pressure in pressures_hPa]
-pressures_hPa_adjusted
+np_pressures_hPa * math.exp(-gravit_acc * molar_mass_earth* height/(gas_constant*standard_temperature))
