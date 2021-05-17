@@ -5,6 +5,7 @@ channels:
 dependencies:
 - ipython
 - jupyter
+- jupyterlab
 - matplotlib>3
 - mplleaflet
 - notebook
