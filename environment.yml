@@ -9,10 +9,10 @@ dependencies:
 - mplleaflet
 - notebook
 - numpy
-- pandas=0.25
+- pandas=1.2
 - plotnine
 - pyproj
-- python=3.7
+- python=3.8
 - requests
 - seaborn
 - xlrd
