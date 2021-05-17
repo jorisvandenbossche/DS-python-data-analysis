@@ -3,17 +3,17 @@ channels:
 - defaults
 - conda-forge
 dependencies:
+- python=3.8
+- pandas=1.2
+- matplotlib>3
 - ipython
 - jupyter
 - jupyterlab
-- matplotlib>3
 - mplleaflet
 - notebook
 - numpy
-- pandas=1.2
 - plotnine
 - pyproj
-- python=3.8
 - requests
 - seaborn
 - xlrd
