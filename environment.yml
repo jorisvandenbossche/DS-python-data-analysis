@@ -17,3 +17,4 @@ dependencies:
 - requests
 - seaborn
 - xlrd
+- openpyxl
