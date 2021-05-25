@@ -1,6 +1,5 @@
 name: DS-python-data-analysis
 channels:
-- defaults
 - conda-forge
 dependencies:
 - python=3.8
