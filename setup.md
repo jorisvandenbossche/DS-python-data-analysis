@@ -66,6 +66,7 @@ dependencies:
 - pandas=1.2
 - matplotlib>3
 - ipython
+...
 ```
 
 The file contains information on:
