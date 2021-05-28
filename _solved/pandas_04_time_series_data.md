@@ -116,7 +116,7 @@ pd.to_datetime("09/12/2016", dayfirst=True)
 pd.to_datetime("09/12/2016", format="%d/%m/%Y")
 ```
 
-A detailed overview of how to specify the `format` string, see the table in the python documentation: https://docs.python.org/3.5/library/datetime.html#strftime-and-strptime-behavior
+A detailed overview of how to specify the `format` string, see the table in the python documentation: https://docs.python.org/3.8/library/datetime.html#strftime-and-strptime-behavior
 
 +++
 
@@ -151,7 +151,7 @@ ts.dt.hour
 ```
 
 ```{code-cell} ipython3
-ts.dt.weekday
+ts.dt.dayofweek
 ```
 
 To quickly construct some regular time series data, the [``pd.date_range``](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.date_range.html) function comes in handy:
@@ -393,10 +393,10 @@ data.resample('M').std().plot() # 'A'
 <b>EXERCISE</b>:
 
  <ul>
-  <li>plot the monthly mean and median values for the years 2011-2012 for 'L06_347'<br><br></li>
+  <li>Plot the monthly mean and median values for the years 2011-2012 for 'L06_347'<br><br></li>
 </ul>
     
-**Note** remember the `agg` when using `groupby` to derive multiple statistics at the same time?
+__Note__ Did you know <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.agg.html"><code>agg</code></a> to derive multiple statistics at the same time?
     
 </div>
 

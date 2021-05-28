@@ -272,6 +272,11 @@ Tip: try it first on a single string (and for this, check the `split` method of 
 df['Surname'] = df['Name'].apply(lambda x: x.split(',')[0])
 ```
 
+```{code-cell} ipython3
+# alternative solution with pandas' string methods
+df['Surname'] = df['Name'].str.split(",").str.get(0)
+```
+
 <div class="alert alert-success">
 
 <b>EXERCISE</b>:
@@ -423,13 +428,13 @@ inception = cast[cast['title'] == 'Inception']
 ```{code-cell} ipython3
 :clear_cell: true
 
-len(inception[inception['n'].isnull()])
+len(inception[inception['n'].isna()])
 ```
 
 ```{code-cell} ipython3
 :clear_cell: true
 
-inception['n'].isnull().sum()
+inception['n'].isna().sum()
 ```
 
 <div class="alert alert-success">
@@ -444,7 +449,7 @@ inception['n'].isnull().sum()
 ```{code-cell} ipython3
 :clear_cell: true
 
-len(inception[inception['n'].notnull()])
+len(inception[inception['n'].notna()])
 ```
 
 <div class="alert alert-success">
@@ -460,7 +465,7 @@ len(inception[inception['n'].notnull()])
 :clear_cell: true
 
 titanic = cast[(cast['title'] == 'Titanic') & (cast['year'] == 1997)]
-titanic = titanic[titanic['n'].notnull()]
+titanic = titanic[titanic['n'].notna()]
 titanic.sort_values('n')
 ```
 

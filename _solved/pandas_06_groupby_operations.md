@@ -197,7 +197,7 @@ df.groupby('Pclass')['Survived'].mean().plot(kind='bar') #and what if you would 
 <b>EXERCISE</b>:
 
  <ul>
-  <li>Make a bar plot to visualize the average Fare payed by people depending on their age. The age column is devided is separate classes using the `pd.cut` function as provided below.</li>
+  <li>Make a bar plot to visualize the average Fare payed by people depending on their age. The age column is divided in separate classes using the `pd.cut` function as provided below.</li>
 </ul>
 </div>
 
@@ -244,7 +244,7 @@ df.groupby(['Pclass', 'Sex'])['Survived'].mean()
 
 +++
 
-Oftentimes you want to know how many elements there are in a certain group (or in other words: the number of occurences of the different values from a column).
+Often you want to know how many elements there are in a certain group (or in other words: the number of occurences of the different values from a column).
 
 To get the size of the groups, we can use `size`:
 
@@ -279,7 +279,7 @@ These exercises are based on the [PyCon tutorial of Brandon Rhodes](https://gith
 - n: the order of the role (n=1: leading role)
 
 ```{code-cell} ipython3
-cast = pd.read_csv('../data/cast.csv')
+cast = pd.read_csv('data/cast.csv')
 cast.head()
 ```
 
@@ -289,7 +289,7 @@ cast.head()
 * year: year of release
 
 ```{code-cell} ipython3
-titles = pd.read_csv('../data/titles.csv')
+titles = pd.read_csv('data/titles.csv')
 titles.head()
 ```
 
@@ -556,7 +556,7 @@ oz_roles[oz_roles > 1].sort_values()
 ```{code-cell} ipython3
 :clear_cell: true
 
-cast['n_total'] = cast.groupby('title')['n'].transform('max') # transform will return an element for each row, so the max value is given to the whole group
+cast['n_total'] = cast.groupby(['title', 'year'])['n'].transform('max') # transform will return an element for each row, so the max value is given to the whole group
 cast.head()
 ```
 
@@ -633,4 +633,8 @@ cast1950['type'].value_counts()
 cast2000 = cast[cast['year'] // 10 == 200]
 cast2000 = cast2000[cast2000['n'] == 1]
 cast2000['type'].value_counts()
+```
+
+```{code-cell} ipython3
+
 ```

@@ -107,7 +107,7 @@ So far, so good...
 Let's now use the full titanic dataset:
 
 ```{code-cell} ipython3
-df = pd.read_csv("../data/titanic.csv")
+df = pd.read_csv("data/titanic.csv")
 ```
 
 ```{code-cell} ipython3
@@ -150,7 +150,7 @@ Well, they need to be combined, according to an `aggregation` functionality, whi
 # Pivot tables - aggregating while pivoting
 
 ```{code-cell} ipython3
-df = pd.read_csv("../data/titanic.csv")
+df = pd.read_csv("data/titanic.csv")
 ```
 
 ```{code-cell} ipython3
@@ -329,7 +329,7 @@ df
 To better understand and reason about pivot tables, we can express this method as a combination of more basic steps. In short, the pivot is a convenient way of expressing the combination of a `groupby` and `stack/unstack`.
 
 ```{code-cell} ipython3
-df = pd.read_csv("../data/titanic.csv")
+df = pd.read_csv("data/titanic.csv")
 ```
 
 ```{code-cell} ipython3
@@ -365,12 +365,12 @@ df.groupby(['Pclass', 'Sex'])['Survived'].mean().unstack()
 These exercises are based on the [PyCon tutorial of Brandon Rhodes](https://github.com/brandon-rhodes/pycon-pandas-tutorial/) (so credit to him!) and the datasets he prepared for that. You can download these data from here: [`titles.csv`](https://drive.google.com/open?id=0B3G70MlBnCgKajNMa1pfSzN6Q3M) and [`cast.csv`](https://drive.google.com/open?id=0B3G70MlBnCgKal9UYTJSR2ZhSW8) and put them in the `/data` folder.
 
 ```{code-cell} ipython3
-cast = pd.read_csv('../data/cast.csv')
+cast = pd.read_csv('data/cast.csv')
 cast.head()
 ```
 
 ```{code-cell} ipython3
-titles = pd.read_csv('../data/titles.csv')
+titles = pd.read_csv('data/titles.csv')
 titles.head()
 ```
 
@@ -432,8 +432,8 @@ pd.crosstab(index=cast['year'], columns=cast['type']).plot(kind='area')
 :clear_cell: true
 
 grouped = cast.groupby(['year', 'type']).size()
-table = grouped.unstack('type')
-(table['actor'] / (table['actor'] + table['actress'])).plot(ylim=[0,1])
+table = grouped.unstack('type').fillna(0)
+(table['actor'] / (table['actor'] + table['actress'])).plot(ylim=[0, 1])
 ```
 
 <div class="alert alert-success">
@@ -462,4 +462,12 @@ c.head()
 d = c.Superman - c.Batman
 print('Superman years:')
 print(len(d[d > 0.0]))
+```
+
+```{code-cell} ipython3
+
+```
+
+```{code-cell} ipython3
+
 ```

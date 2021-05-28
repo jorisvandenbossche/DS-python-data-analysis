@@ -14,73 +14,67 @@ kernelspec:
 <p><font size="6"><b> CASE - Bike count data</b></font></p>
 
 
-> *DS Data manipulation, analysis and visualisation in Python*  
-> *December, 2019*
-
-> *© 2016, Joris Van den Bossche and Stijn Van Hoey  (<mailto:jorisvandenbossche@gmail.com>, <mailto:stijnvanhoey@gmail.com>). Licensed under [CC BY 4.0 Creative Commons](http://creativecommons.org/licenses/by/4.0/)*
+> *DS Data manipulation, analysis and visualization in Python*  
+> *May/June, 2021*
+>
+> *© 2021, Joris Van den Bossche and Stijn Van Hoey  (<mailto:jorisvandenbossche@gmail.com>, <mailto:stijnvanhoey@gmail.com>). Licensed under [CC BY 4.0 Creative Commons](http://creativecommons.org/licenses/by/4.0/)*
 
 ---
 
 +++
 
-<img src="https://nbocdn.akamaized.net/Assets/Images_Upload/2016/11/24/GEFV45415.jpg?maxheight=460&maxwidth=638">
+<img src="https://static.nieuwsblad.be/Assets/Images_Upload/2014/04/17/57b8f34e-5042-11e2-80ee-5d1d7b74455f_original.jpg.h380.jpg.568.jpg?maxheight=460&maxwidth=638&scale=both">
 
 +++
 
-In this case study, we will make use of the freely available bike count data of the city of Ghent. At the Coupure Links, next to the Faculty of Bioscience Engineering, a counter keeps track of the number of passing cyclists in both directions.  
-
-Those data are available on the open data portal of the city: https://data.stad.gent/data/236
+In this case study, we will make use of the openly available bike count data of the city of Ghent (Belgium). At the Coupure Links, next to the Faculty of Bioscience Engineering, a counter keeps track of the number of passing cyclists in both directions.  
 
 ```{code-cell} ipython3
 import pandas as pd
 import matplotlib.pyplot as plt
 plt.style.use('seaborn-whitegrid')
-
-%matplotlib notebook
 ```
 
-## Reading and processing the data
+# Reading and processing the data
 
 +++
 
-### Read csv data from URL
+## Read csv data
 
 +++
 
-The data are avaible in CSV, JSON and XML format. We will make use of the CSV data. The link to download the data can be found on the webpage. For the first dataset, this is:
+The data were previously available on the open data portal of the city, and we downloaded them in the `CSV` format, and provided the original file as `data/fietstellingencoupure.csv`. 
 
-    link = "https://datatank.stad.gent/4/mobiliteit/fietstellingencoupure.csv"
-    
-A limit defines the size of the requested data set, by adding a limit parameter `limit` to the URL :
-
-    link = "https://datatank.stad.gent/4/mobiliteit/fietstellingencoupure.csv?limit=100000"
-
-Those datasets contain the historical data of the bike counters, and consist of the following columns:
+This data set contains the historical data of the bike counters, and consists of the following columns:
 
 - The first column `datum` is the date, in `dd/mm/yy` format
 - The second column `tijd` is the time of the day, in `hh:mm` format
 - The third and fourth column `ri Centrum` and `ri Mariakerke` are the counts at that point in time (counts between this timestamp and the previous)
 
-```{code-cell} ipython3
-limit = 200000
-link = "https://datatank.stad.gent/4/mobiliteit/fietstellingencoupure.csv?limit={}".format(limit)
-```
++++
 
 <div class="alert alert-success">
- <b>EXERCISE</b>:
- <ul>
-  <li>Read the csv file from the url into a DataFrame `df`, the delimiter of the data is `;`</li>
-  <li>Inspect the first and last 5 rows, and check the number of observations</li>
-  <li>Inspect the data types of the different columns</li>
 
-</ul> 
+**EXERCISE**
 
+- Read the csv file from the url into a DataFrame `df`, the delimiter of the data is `;`
+- Inspect the first and last 5 rows, and check the number of observations
+- Inspect the data types of the different columns
+
+<details><summary>Hints</summary>
+
+- With the cursor on a function, you can combine the SHIFT + TAB keystrokes to see the documentation of a function.
+- Both the `sep` and `delimiter` argument will work to define the delimiter.
+- Methods like `head`/`tail` have round brackets `()`, attributes like `dtypes` not.
+
+</details>    
+    
 </div>
 
 ```{code-cell} ipython3
 :clear_cell: true
 
-df = pd.read_csv(link, sep=';')
+df = pd.read_csv("data/fietstellingencoupure.csv", sep=';')
 ```
 
 ```{code-cell} ipython3
@@ -107,35 +101,34 @@ len(df)
 df.dtypes
 ```
 
-<div class="alert alert-warning">
-
- <b>Remark</b>: If the download is very slow, consider to reset the limit variable to a lower value as most execises will just work with the first 100000 records as well.
-
-</div>
+## Data processing
 
 +++
 
-### Data processing
-
-+++
-
-As explained above, the first and second column (respectively `datum` and `tijd`) indicate the date and hour of the day. To obtain a time series, we have to combine those two columns into one series of actual datetime values. 
+As explained above, the first and second column (respectively `datum` and `tijd`) indicate the date and hour of the day. To obtain a time series, we have to combine those two columns into one series of actual `datetime` values. 
 
 +++
 
 <div class="alert alert-success">
 
- <b>EXERCISE</b>: Preprocess the data
+**EXERCISE**
 
- <ul>
-  <li>Combine the 'datum' and 'tijd' columns into one Series of string datetime values (Hint: concatenating strings can be done with the addition operation)</li>
-  <li>Parse the string datetime values (Hint: specifying the format will make this a lot faster)</li>
-  <li>Set the resulting dates as the index</li>
-  <li>Remove the original 'tijd' and 'tijd' columns (Hint: check the <code>drop</code> method)</li>
-  <li>Rename the 'ri Centrum', 'ri Mariakerke' to 'direction_centre', 'direction_mariakerke' (Hint: check the <code>rename</code> function)</li>
-</ul> 
+Pre-process the data:
 
-</div>
+* Combine the 'datum' and 'tijd' columns into one Pandas Series of string `datetime` values, call this new variable `combined`.
+* Parse the string `datetime` values to `datetime` objects.
+* Set the resulting `datetime` column as the index of the `df` DataFrame.
+* Remove the original 'datum' and 'tijd' columns using the `drop` method, and call the new dataframe `df2`.
+* Rename the columns in the DataFrame 'ri Centrum', 'ri Mariakerke' to resp. 'direction_centre', 'direction_mariakerke' using the `rename` method.
+
+<details><summary>Hints</summary>
+
+- Concatenating strings can be done with the addition operation `+`.
+- When converting strings to a `datetime` with `pd.to_datetime`, specifying the format will make the conversion a lot faster.
+- `drop` can remove both rows and columns using the names of the index or column name. Make sure to define `columns=` argument to remove columns.
+- `rename` can be used for both rows/columns. It needs a dictionary with the current names as keys and the new names as values. 
+
+</details>    
 
 ```{code-cell} ipython3
 :clear_cell: true
@@ -153,20 +146,21 @@ df.index = pd.to_datetime(combined, format="%d/%m/%Y %H:%M")
 ```{code-cell} ipython3
 :clear_cell: true
 
-df = df.drop(columns=['datum', 'tijd'])
+df2 = df.drop(columns=['datum', 'tijd'])
 ```
 
 ```{code-cell} ipython3
 :clear_cell: true
 
-df = df.rename(columns={'ri Centrum': 'direction_centre', 'ri Mariakerke':'direction_mariakerke'})
+df2 = df2.rename(columns={'ri Centrum': 'direction_centre', 
+                          'ri Mariakerke':'direction_mariakerke'})
 ```
 
 ```{code-cell} ipython3
-df.head()
+df2.head()
 ```
 
-Having the data available with an interpreted datetime, provides us the possibility of having time aware plotting:
+Having the data available with an interpreted `datetime`, provides us the possibility of having time aware plotting:
 
 ```{code-cell} ipython3
 fig, ax = plt.subplots(figsize=(10, 6))
@@ -184,10 +178,14 @@ df.plot(colormap='coolwarm', ax=ax)
 When we just want to interpret the dates, without specifying how the dates are formatted, Pandas makes an attempt as good as possible:
 
 ```{code-cell} ipython3
+combined = df['datum'] + ' ' + df['tijd']
+```
+
+```{code-cell} ipython3
 %timeit -n 1 -r 1 pd.to_datetime(combined, dayfirst=True)
 ```
 
-However, when we already know the format of the dates (and if this is consistent throughout the full dataset), we can use this information to interpret the dates:
+However, when we already know the format of the dates (and if this is consistent throughout the full data set), we can use this information to interpret the dates:
 
 ```{code-cell} ipython3
 %timeit pd.to_datetime(combined, format="%d/%m/%Y %H:%M")
@@ -195,7 +193,7 @@ However, when we already know the format of the dates (and if this is consistent
 
 <div class="alert alert-info">
 
- <b>Remember</b>: Whenever possible, specify the date format to interpret the dates to datetime values!
+ <b>Remember</b>: Whenever possible, specify the date format to interpret the dates to `datetime` values!
 
 </div>
 
@@ -203,44 +201,61 @@ However, when we already know the format of the dates (and if this is consistent
 
 ### Write the data set cleaning as a function
 
-In order to make it easier to reuse the code for the preprocessing we have now implemented, let's convert the code to a Python function
+In order to make it easier to reuse the code for the pre-processing we have implemented, let's convert the code to a Python function:
 
 +++
 
 <div class="alert alert-success">
 
-<b>EXERCISE</b>:
+**EXERCISE**
 
- <ul>
-  <li>Write a function <code>process_bike_count_data(df)</code> that performs the processing steps as done above for an input DataFrame and return the updated DataFrame</li>
-</ul> 
+Write a function `process_bike_count_data(df)` that performs the processing steps as done above for an input Pandas DataFrame and returns the updated DataFrame.
 
-</div>
+<details><summary>Hints</summary>
+
+- Want to know more about proper documenting your Python functions? Check out the official guide of [numpydoc](https://numpydoc.readthedocs.io/en/latest/format.html). The `Parameters` and `Returns` sections should always be explained.
+
+</details>
 
 ```{code-cell} ipython3
 :clear_cell: true
 
 def process_bike_count_data(df):
-    """
-    Process the provided dataframe: parse datetimes and rename columns.
+    """Process the provided dataframe: parse datetimes and rename columns.
     
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        DataFrame as read from the raw `fietstellingen`, 
+        containing the `datum`, `tijd`, `ri Centrum` 
+        and `ri Mariakerke` columns.
+        
+    Returns
+    -------
+    df2 : pandas.DataFrame
+        DataFrame with the datetime info as index and the 
+        `direction_centre` and `direction_mariakerke` columns 
+        with the counts.
     """
-    df.index = pd.to_datetime(df['datum'] + ' ' + df['tijd'], format="%d/%m/%Y %H:%M")
-    df = df.drop(columns=['datum', 'tijd'])
-    df = df.rename(columns={'ri Centrum': 'direction_centre', 'ri Mariakerke':'direction_mariakerke'})
-    return df
+    df.index = pd.to_datetime(df['datum'] + ' ' + df['tijd'], 
+                              format="%d/%m/%Y %H:%M")
+    df2 = df.drop(columns=['datum', 'tijd'])
+    df2 = df2.rename(columns={'ri Centrum': 'direction_centre', 
+                              'ri Mariakerke':'direction_mariakerke'})
+    return df2
 ```
 
 ```{code-cell} ipython3
-df_raw = pd.read_csv(link, sep=';')
+df_raw = pd.read_csv("data/fietstellingencoupure.csv", sep=';')
 df_preprocessed = process_bike_count_data(df_raw)
+df_preprocessed.head()
 ```
 
-### Store our collected dataset as an interim data product
+### Store our collected data set as an interim data product
 
 +++
 
-As we finished our data-collection step, we want to save this result as a interim data output of our small investigation. As such, we do not have to re-download all the files each time something went wrong, but can restart from our interim step.
+As we finished our data-collection step, we want to save this result as an interim data output of our small investigation. As such, we do not have to re-download all the files each time something went wrong, but can restart from our interim step.
 
 ```{code-cell} ipython3
 df_preprocessed.to_csv("bike_count_interim.csv")
@@ -250,7 +265,7 @@ df_preprocessed.to_csv("bike_count_interim.csv")
 
 +++
 
-We now have a cleaned-up dataset of the bike counts at Coupure Links. Next, we want to get an impression of the characteristics and properties of the data
+We now have a cleaned-up data set of the bike counts at Coupure Links in Ghent (Belgium). Next, we want to get an impression of the characteristics and properties of the data
 
 +++
 
@@ -268,20 +283,19 @@ df = pd.read_csv("bike_count_interim.csv", index_col=0, parse_dates=True)
 
 +++
 
-The number of bikers are counted for intervals of approximately 15 minutes. But let's check if this is indeed the case.  
-For this, we want to calculate the difference between each of the consecutive values of the index. We can use the `Series.diff()` method:
+The number of bikers are counted for intervals of approximately 15 minutes. But let's check if this is indeed the case. Calculate the difference between each of the consecutive values of the index. We can use the `Series.diff()` method:
 
 ```{code-cell} ipython3
 pd.Series(df.index).diff()
 ```
 
-Again, the count of the possible intervals is of interest:
+The count of the possible intervals is of interest:
 
 ```{code-cell} ipython3
 pd.Series(df.index).diff().value_counts()
 ```
 
-There are a few records that is not exactly 15min. But given it are only a few ones, we will ignore this for the current case study and just keep them as such for this explorative study.  
+There are a few records that are not exactly 15min. But given it are only a few ones, we will ignore this for the current case study and just keep them for this explorative study.  
 
 Bonus question: do you know where the values of `-1 days +23:15:01` and `01:15:00` are coming from?
 
@@ -295,33 +309,35 @@ df.describe()
 
 <div class="alert alert-success">
 
-<b>EXERCISE</b>:
+**EXERCISE**
 
- <ul>
-  <li>Create a new Series, <code>df_both</code> which contains the sum of the counts of both directions</li>
-</ul> 
+Create a new Pandas Series `df_both` which contains the sum of the counts of both directions.
 
-<br>
+<details><summary>Hints</summary>
 
-_Tip:_ check the purpose of the `axis` argument of the `sum` function
+- Check the purpose of the `axis` argument of the `sum` method.
 
-</div>
+</details>   
 
 ```{code-cell} ipython3
 :clear_cell: true
 
 df_both = df.sum(axis=1)
+df_both
 ```
 
 <div class="alert alert-success">
 
-<b>EXERCISE</b>:
+**EXERCISE**
 
- <ul>
-  <li>Using the <code>df_both</code> from the previous exercise, create a new Series <code>df_quiet</code> which contains only those intervals for which less than 5 cyclists passed in both directions combined</li>
-</ul> 
+Using the `df_both` from the previous exercise, create a new Series `df_quiet` which contains only those intervals for which less than 5 cyclists passed in both directions combined
 
-</div>
+<details><summary>Hints</summary>
+
+- Use the `[]` to select data. You can use conditions (so-called _boolean indexing_) returning True/False inside the brackets.
+
+</details>    
+   
 
 ```{code-cell} ipython3
 :clear_cell: true
@@ -331,13 +347,17 @@ df_quiet = df_both[df_both < 5]
 
 <div class="alert alert-success">
 
-<b>EXERCISE</b>:
+**EXERCISE**
 
- <ul>
-  <li>Using the original data, select only the intervals for which less than 3 cyclists passed in one or the other direction. Hence, less than 3 cyclists towards the centre or less than 3 cyclists towards Mariakerke.</li>
-</ul> 
+Using the original data `df`, select only the intervals for which less than 3 cyclists passed in one or the other direction. Hence, less than 3 cyclists towards the center or less than 3 cyclists towards Mariakerke.
 
-</div>
+<details><summary>Hints</summary>
+
+- To combine conditions use the `|` (or) or the `&` (and) operators.
+- Make sure to use `()` around each individual condition.    
+
+</details>    
+  
 
 ```{code-cell} ipython3
 :clear_cell: true
@@ -351,13 +371,16 @@ df[(df['direction_centre'] < 3) | (df['direction_mariakerke'] < 3)]
 
 <div class="alert alert-success">
 
-<b>EXERCISE</b>:
+**EXERCISE**
 
- <ul>
-  <li>What is the average number of bikers passing each 15 min?</li>
-</ul> 
+What is the average number of bikers passing each 15 min?
+    
+<details><summary>Hints</summary>
 
-</div>
+- As the time series is already 15min level, this is just the same as taking the mean.
+
+</details>    
+    
 
 ```{code-cell} ipython3
 :clear_cell: true
@@ -367,15 +390,16 @@ df.mean()
 
 <div class="alert alert-success">
 
-<b>EXERCISE</b>:
+**EXERCISE**
 
- <ul>
-  <li>What is the average number of bikers passing each hour?</li>
-</ul> 
+What is the average number of bikers passing each hour?
 
-_Tip:_ you can use `resample` to first calculate the number of bikers passing each hour.
+<details><summary>Hints</summary>
 
-</div>
+- Use `resample` to first calculate the number of bikers passing each hour. 
+- `resample` requires an aggregation function that defines how to combine the values within each group (in this case all values within each hour).
+
+</details>
 
 ```{code-cell} ipython3
 :clear_cell: true
@@ -385,13 +409,15 @@ df.resample('H').sum().mean()
 
 <div class="alert alert-success">
 
-<b>EXERCISE</b>:
+**EXERCISE**
 
- <ul>
-  <li>What are the 10 highest peak values observed during any of the intervals for the direction towards the centre of Ghent?</li>
-</ul> 
+What are the 10 highest peak values observed during any of the intervals for the direction towards the center of Ghent?
 
-</div>
+<details><summary>Hints</summary>
+
+- Pandas provides the `nsmallest` and  `nlargest` methods to derive N smallest/largest values of a column.
+
+</details>
 
 ```{code-cell} ipython3
 :clear_cell: true
@@ -403,13 +429,17 @@ df['direction_centre'].nlargest(10)
 
 <div class="alert alert-success">
 
-<b>EXERCISE</b>:
+**EXERCISE**
 
- <ul>
-  <li>What is the maximum number of cyclist that passed on a single day calculated on both directions combined?</li>
-</ul> 
+What is the maximum number of cyclist that passed on a single day calculated on both directions combined?
 
-</div>
+<details><summary>Hints</summary>
+
+- Combine both directions by taking the sum.
+- Next, `resample` to daily values
+- Get the maximum value or ask for the n largest to see the dates as well.    
+
+</details>
 
 ```{code-cell} ipython3
 :clear_cell: true
@@ -430,10 +460,12 @@ df_daily.max()
 ```
 
 ```{code-cell} ipython3
+:clear_cell: false
+
 df_daily.nlargest(10)
 ```
 
-2013-06-05 was the first time more than 10,000 bikers passed on one day. Apparanlty, this was not just by coincidence... http://www.nieuwsblad.be/cnt/dmf20130605_022
+The high number of bikers passing on 2013-06-05 was not by coincidence: http://www.nieuwsblad.be/cnt/dmf20130605_022 ;-)
 
 +++
 
@@ -443,13 +475,16 @@ df_daily.nlargest(10)
 
 <div class="alert alert-success">
 
-<b>EXERCISE</b>:
+**EXERCISE**
 
- <ul>
-  <li>How does the long-term trend look like? Calculate monthly sums and plot the result.</li>
-</ul> 
+How does the long-term trend look like? Calculate monthly sums and plot the result.
 
-</div>
+<details><summary>Hints</summary>
+
+- The symbol for monthly resampling is `M`.
+- Use the `plot` method of Pandas, which will generate a line plot of each numeric column by default.
+
+</details>
 
 ```{code-cell} ipython3
 :clear_cell: true
@@ -460,13 +495,15 @@ df_monthly.plot()
 
 <div class="alert alert-success">
 
-<b>EXERCISE</b>:
+**EXERCISE**
 
- <ul>
-  <li>Let's have a look at some short term patterns. For the data of the first 3 weeks of January 2014, calculate the hourly counts and visualize them.</li>
-</ul> 
+Let's have a look at some short term patterns. For the data of the first 3 weeks of January 2014, calculate the hourly counts and visualize them.
 
-</div>
+<details><summary>Hints</summary>
+
+- Slicing is done using `[]`, you can use string representation of dates to select from a `datetime` index: e.g. `'2010-01-01':'2020-12-31'`
+
+</details>
 
 ```{code-cell} ipython3
 :clear_cell: true
@@ -492,14 +529,17 @@ df_hourly['2014-01-01':'2014-01-20'].plot()
 
 <div class="alert alert-success">
 
-<b>EXERCISE</b>:
+**EXERCISE**
 
- <ul>
-  <li>Select a subset of the data set from 2013-12-31 12:00:00 untill 2014-01-01 12:00:00, store as variable <code>newyear</code> and plot this subset</li>
-  <li>Use a <code>rolling</code> function (check documentation of the function!) to smooth the data of this period and make a plot of the smoothed version</li>
-</ul> 
+- Select a subset of the data set from 2013-12-31 12:00:00 until 2014-01-01 12:00:00 and assign the result to a new variable `newyear` 
+- Plot the selected data `newyear`.
+- Use a `rolling` function with a window of 10 values (check documentation of the function) to smooth the data of this period and make a plot of the smoothed version.
 
-</div>
+<details><summary>Hints</summary>
+
+- Just like `resample`, `rolling` requires an aggregate statistic (e.g. mean, median,...) to combine the values within the window.
+
+</details>
 
 ```{code-cell} ipython3
 :clear_cell: true
@@ -519,7 +559,7 @@ newyear.plot()
 newyear.rolling(10, center=True).mean().plot(linewidth=2)
 ```
 
-A more advanced usage of matplotlib to create a combined plot:
+A more advanced usage of Matplotlib to create a combined plot:
 
 ```{code-cell} ipython3
 :clear_cell: true
@@ -543,7 +583,7 @@ Looking at the data in the above exercises, there seems to be clearly a:
 - weekly pattern
 - yearly pattern
 
-Such patterns can easily be calculated and visualized in pandas using the DatetimeIndex attributes `weekday` combined with `groupby` functionality. Below a taste of the possibilities, and we will learn about this in the proceeding notebooks:
+Such patterns can easily be calculated and visualized in pandas using the `DatetimeIndex` attributes `dayofweek` combined with `groupby` functionality. Below a taste of the possibilities, and we will learn about this in the proceeding notebooks:
 
 +++
 
@@ -554,7 +594,7 @@ df_daily = df.resample('D').sum()
 ```
 
 ```{code-cell} ipython3
-df_daily.groupby(df_daily.index.weekday).mean().plot(kind='bar')
+df_daily.groupby(df_daily.index.dayofweek).mean().plot(kind='bar')
 ```
 
 **Daily pattern:**

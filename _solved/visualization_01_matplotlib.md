@@ -14,10 +14,10 @@ kernelspec:
 <p><font size="6"><b>Matplotlib: Introduction </b></font></p>
 
 
-> *DS Data manipulation, analysis and visualisation in Python*  
-> *December, 2019*
+> *DS Data manipulation, analysis and visualization in Python*  
+> *May/June, 2021*
 
-> *© 2016, Joris Van den Bossche and Stijn Van Hoey  (<mailto:jorisvandenbossche@gmail.com>, <mailto:stijnvanhoey@gmail.com>). Licensed under [CC BY 4.0 Creative Commons](http://creativecommons.org/licenses/by/4.0/)*
+> *© 2021, Joris Van den Bossche and Stijn Van Hoey  (<mailto:jorisvandenbossche@gmail.com>, <mailto:stijnvanhoey@gmail.com>). Licensed under [CC BY 4.0 Creative Commons](http://creativecommons.org/licenses/by/4.0/)*
 
 ---
 
@@ -61,15 +61,25 @@ On its own, drawing the figure artist is uninteresting and will result in an emp
 
 By far the most useful artist in matplotlib is the **Axes** artist. The Axes artist represents the "data space" of a typical plot, a rectangular axes (the most common, but not always the case, e.g. polar plots) will have 2 (confusingly named) **Axis** artists with tick labels and tick marks.
 
+![](../img/matplotlib_fundamentals.png)
+
 There is no limit on the number of Axes artists which can exist on a Figure artist. Let's go ahead and create a figure with a single Axes artist, and show it using pyplot:
 
 ```{code-cell} ipython3
 ax = plt.axes()
 ```
 
+```{code-cell} ipython3
+type(ax)
+```
+
+```{code-cell} ipython3
+type(ax.xaxis), type(ax.yaxis)
+```
+
 Matplotlib's ``pyplot`` module makes the process of creating graphics easier by allowing us to skip some of the tedious Artist construction. For example, we did not need to manually create the Figure artist with ``plt.figure`` because it was implicit that we needed a figure when we created the Axes artist.
 
-Under the hood matplotlib still had to create a Figure artist, its just we didn't need to capture it into a variable. We can access the created object with the "state" functions found in pyplot called **``gcf``** and **``gca``**.
+Under the hood matplotlib still had to create a Figure artist, its just we didn't need to capture it into a variable.
 
 +++
 
@@ -166,6 +176,12 @@ ax.text(0.5, 0.5, 'Text centered at (0.5, 0.5)\nin Figure coordinates.',
 ax.legend(loc='upper right', frameon=True, ncol=2, fontsize=14)
 ```
 
+Adjusting specific parts of a plot is a matter of accessing the correct element of the plot:
+
+![](https://matplotlib.org/stable/_images/anatomy.png)
+
++++
+
 For more information on legend positioning, check [this post](http://stackoverflow.com/questions/4700614/how-to-put-the-legend-out-of-the-plot) on stackoverflow!
 
 +++
@@ -236,14 +252,18 @@ import pandas as pd
 ```
 
 ```{code-cell} ipython3
-flowdata = pd.read_csv('../data/vmm_flowdata.csv', 
+flowdata = pd.read_csv('data/vmm_flowdata.csv', 
                        index_col='Time', 
                        parse_dates=True)
 ```
 
 ```{code-cell} ipython3
-flowdata.plot()
+out = flowdata.plot()  # print type()
 ```
+
+Under the hood, it creates an Matplotlib Figure with an Axes object.
+
++++
 
 ### Pandas versus matplotlib
 
@@ -252,7 +272,7 @@ flowdata.plot()
 #### Comparison 1: single plot
 
 ```{code-cell} ipython3
-flowdata.plot(figsize=(16, 6)) # shift tab this!
+flowdata.plot(figsize=(16, 6)) # SHIFT + TAB this!
 ```
 
 Making this with matplotlib...
@@ -275,7 +295,7 @@ axs = flowdata.plot(subplots=True, sharex=True,
                     fontsize=15, rot=0)
 ```
 
-Mimicking this in matplotlib (just as a reference):
+Mimicking this in matplotlib (just as a reference, it is basically what Pandas is doing under the hood):
 
 ```{code-cell} ipython3
 from matplotlib import cm
@@ -288,7 +308,7 @@ fig, axs = plt.subplots(3, 1, figsize=(16, 8))
 for ax, col, station in zip(axs, colors, flowdata.columns):
     ax.plot(flowdata.index, flowdata[station], label=station, color=col)
     ax.legend()
-    if not ax.is_last_row():
+    if not ax.get_subplotspec().is_last_row():
         ax.xaxis.set_ticklabels([])
         ax.xaxis.set_major_locator(mdates.YearLocator())
     else:
@@ -305,9 +325,9 @@ Is already a bit harder ;-)
 ### Best of both worlds...
 
 ```{code-cell} ipython3
-fig, ax = plt.subplots() #prepare a matplotlib figure
+fig, ax = plt.subplots() #prepare a Matplotlib figure
 
-flowdata.plot(ax=ax) # use pandas for the plotting
+flowdata.plot(ax=ax) # use Pandas for the plotting
 ```
 
 ```{code-cell} ipython3
@@ -375,7 +395,7 @@ def vmm_station_plotter(flowdata, label="flow (m$^3$s$^{-1}$)"):
         ax.set_ylabel(label, size=15)
         ax.yaxis.set_major_locator(MaxNLocator(4)) # smaller set of y-ticks for clarity
         
-        if not ax.is_last_row():  # hide the xticklabels from the none-lower row x-axis
+        if not ax.get_subplotspec().is_last_row():  # hide the xticklabels from the none-lower row x-axis
             ax.xaxis.set_ticklabels([])
             ax.xaxis.set_major_locator(mdates.YearLocator())
         else:                     # yearly xticklabels from the lower x-axis in the subplots
@@ -397,13 +417,11 @@ fig.suptitle('Ammonium concentrations in the Maarkebeek', fontsize='17')
 fig.savefig('ammonium_concentration.pdf')
 ```
 
-<div class="alert alert-danger">
+<div class="alert alert-warning">
 
- <b>NOTE</b>: 
+**NOTE**
 
-<ul>
-  <li>Let your hard work pay off, write your own custom functions!</li>
-</ul>
+- Let your hard work pay off, write your own custom functions!
 
 </div>
 
@@ -411,7 +429,7 @@ fig.savefig('ammonium_concentration.pdf')
 
 <div class="alert alert-info" style="font-size:18px">
 
- <b>Remember</b>: 
+**Remember** 
 
 `fig.savefig()` to save your Figure object!
 
@@ -432,12 +450,12 @@ For more in-depth material:
 
 <div class="alert alert-info" style="font-size:18px">
 
- <b>Remember</b>(!)
+**Remember**
 
-<ul>
-  <li><a href="http://matplotlib.org/gallery.html">matplotlib gallery</a> is an important resource to start from</li> 
-</ul>
-<br>
-
+- <a href="https://matplotlib.org/stable/gallery/index.html">matplotlib gallery</a> is an important resource to start from
 
 </div>
+
+```{code-cell} ipython3
+
+```
