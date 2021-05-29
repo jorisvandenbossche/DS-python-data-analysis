@@ -13,7 +13,6 @@ from scipy.stats import linregress
 
 import pandas as pd
 from pandas.tseries.offsets import DateOffset
-from pandas.stats.moments import rolling_std
 
 import pylab as p
 import matplotlib as mpl
