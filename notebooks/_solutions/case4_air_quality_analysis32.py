@@ -1,1 +1,1 @@
-exceedances = data.rolling(8).mean().resample('D').max() > 100
+sns.set_style("whitegrid")

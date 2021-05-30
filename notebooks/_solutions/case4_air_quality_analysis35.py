@@ -1,3 +1,2 @@
-# add a weekday column
-data_daily['weekday'] = data_daily.index.weekday
-data_daily.head()
+exceedances = exceedances.groupby(exceedances.index.year).sum()
+ax = exceedances.plot(kind='bar')

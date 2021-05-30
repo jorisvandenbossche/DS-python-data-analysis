@@ -27,13 +27,11 @@ def read_airbase_file(filename, station):
     data = data.drop([col for col in data.columns if 'flag' in col], axis=1)
 
     # reshape
-    data = data.set_index('date')
-    data_stacked = data.stack()
-    data_stacked = data_stacked.reset_index()
+    data_stacked = pd.melt(data, id_vars=['date'], var_name='hour')
     
     # parse to datetime and remove redundant columns 
-    data_stacked.index = pd.to_datetime(data_stacked['date'] + data_stacked['level_1'], format="%Y-%m-%d%H")
-    data_stacked = data_stacked.drop(['date', 'level_1'], axis=1)
-    data_stacked = data_stacked.rename(columns={0: station})
+    data_stacked.index = pd.to_datetime(data_stacked['date'] + data_stacked['hour'], format="%Y-%m-%d%H")
+    data_stacked = data_stacked.drop(['date', 'hour'], axis=1)
+    data_stacked = data_stacked.rename(columns={'value': station})
     
     return data_stacked

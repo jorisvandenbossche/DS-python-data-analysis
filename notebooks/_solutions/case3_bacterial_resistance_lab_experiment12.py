@@ -1,2 +1,3 @@
-# The Nan-values of the PhageR_72h when no phage represent survival (1)
-end_of_experiment["PhageR_72h"] = end_of_experiment["PhageR_72h"].fillna(0.)
+def errorbar(x, y, low, high, **kws):
+    """Utility function to link falcor data representation with the errorbar representation"""
+    plt.errorbar(x, y, (y - low, high - y), capsize=3, fmt="o", color="black", ms=4)

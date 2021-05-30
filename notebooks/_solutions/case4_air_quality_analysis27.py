@@ -1,11 +1,5 @@
-# Mixing an matching matplotlib and Pandas
-fig, (ax1, ax2) = plt.subplots(1, 2, 
-                               sharex=True, 
-                               sharey=True)
-
-data.loc['2009', ['BETN029', 'BETR801']].plot(kind='hist', subplots=True, 
-                                              bins=30, legend=False, 
-                                              ax=(ax1, ax2))
-ax1.set_title('BETN029')
-ax2.set_title('BETR801')
-# Remark: the width of the bins is calculated over the x data range for both plots together
+fig, axfr = plt.subplots()
+FR_scaled.plot(use_index=False, ax = axfr)  #alternative version: FR_scaled.reset_index(drop=True).plot(use_index=False)  
+axfr.set_ylabel('FR04012')
+# optional addition, just in case you need this
+axfr.axvline(x=FR_scaled.searchsorted(0.3), color='0.6', linestyle='--', linewidth=3)

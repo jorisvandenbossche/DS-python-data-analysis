@@ -1,1 +1,1 @@
-data_daily = data.resample('D').mean()
+exceedances = data.rolling(8).mean().resample('D').max() > 100

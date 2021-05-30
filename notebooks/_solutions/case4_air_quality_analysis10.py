@@ -1,8 +1,11 @@
-# add a column to the dataframe that indicates the month (integer value of 1 to 12):
-data['month'] = data.index.month
+fig, ax = plt.subplots()
 
-# now, we can calculate the mean of each month over the different years:
-data.groupby('month').mean()
-
-# plot the typical monthly profile of the different stations:
-data.groupby('month').mean().plot()
+data['1999':].resample('A').mean().plot(ax=ax)
+data['1999':].mean(axis=1).resample('A').mean().plot(color='k', 
+                                            linestyle='--', 
+                                            linewidth=4, 
+                                            ax=ax, 
+                                            label='Overall mean')
+ax.legend(loc='center', ncol=3, 
+          bbox_to_anchor=(0.5, 1.06))
+ax.set_ylabel("NO$_2$ concentration (µg/m³)");

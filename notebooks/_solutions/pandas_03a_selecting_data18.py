@@ -1,1 +1,1 @@
-inception['n'].isnull().sum()
+titles.sort_values('year').head(2)

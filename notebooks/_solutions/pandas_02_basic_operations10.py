@@ -1,2 +1,1 @@
-df['Fare_log'] = np.log(df['Fare'])
-df.head()
+np.log(df['Fare'])

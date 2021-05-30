@@ -1,11 +1,7 @@
 fig, ax = plt.subplots()
-
-data['1999':].resample('A').mean().plot(ax=ax)
-data['1999':].mean(axis=1).resample('A').mean().plot(color='k', 
-                                            linestyle='--', 
-                                            linewidth=4, 
-                                            ax=ax, 
-                                            label='Overall mean')
-ax.legend(loc='center', ncol=3, 
-          bbox_to_anchor=(0.5, 1.06))
-ax.set_ylabel("NO$_2$ concentration (µg/m³)");
+data['2012'].mean().plot(kind='bar', ax=ax, rot=0, color='C0')
+ax.set_ylabel("NO$_2$ concentration (µg/m³)")
+ax.axhline(y=40., color='darkorange')
+ax.text(0.01, 0.48, 'Yearly limit is 40 µg/m³',
+        horizontalalignment='left', fontsize=13, 
+        transform=ax.transAxes, color='darkorange');

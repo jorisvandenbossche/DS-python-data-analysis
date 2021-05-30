@@ -1,1 +1,1 @@
-len(titles[titles['year'] // 10 == 195])
+df[df['Surname'].str.startswith('Williams')]

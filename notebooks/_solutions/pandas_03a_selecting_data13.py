@@ -1,1 +1,2 @@
-titles[titles.title == 'Treasure Island'].sort_values('year')
+# alternative using an "inline" lambda function
+df['Surname'] = df['Name'].apply(lambda x: x.split(',')[0])

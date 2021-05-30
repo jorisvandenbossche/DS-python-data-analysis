@@ -1,1 +1,1 @@
-len(inception[inception['n'].isnull()])
+len(titles)

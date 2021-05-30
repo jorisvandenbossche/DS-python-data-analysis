@@ -1,5 +1,4 @@
-# tidy dataset that still includes all stations
+# using a tidy dataset and seaborn
+data_weekend_BETR801_tidy = data_weekend['BETR801'].reset_index()
 
-data_weekend_tidy = pd.melt(data_weekend.reset_index(), id_vars=['weekend', 'hour'],
-                            var_name='station', value_name='no2')
-data_weekend_tidy.head()
+sns.lineplot(data=data_weekend_BETR801_tidy, x="hour", y="BETR801", hue="weekend")

@@ -1,1 +1,1 @@
-len(inception[inception['n'].notnull()])
+len(titles[titles['title'] == 'Hamlet'])

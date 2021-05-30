@@ -1,1 +1,2 @@
-end_of_experiment = tidy_experiment[tidy_experiment["experiment_time_h"] == "OD_72h"].copy()
+falcor["Bacterial_genotype"] = falcor["Bacterial_genotype"].replace({'WT(2)': 'WT', 
+                                                                     'MUT(2)': 'MUT'})

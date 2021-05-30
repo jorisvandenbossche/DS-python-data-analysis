@@ -1,1 +1,2 @@
-df['Surname'] = df['Name'].apply(lambda x: x.split(',')[0])
+name = df['Name'][0]
+name

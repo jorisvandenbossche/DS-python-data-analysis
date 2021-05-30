@@ -1,4 +1,1 @@
-(pn.ggplot(subset,
-           pn.aes(x="BETN029", y="FR04037", color="weekday"))
-    + pn.geom_point()
-    + pn.stat_smooth(method='lm'))
+subset["dayofweek"] = subset["dayofweek"].replace(to_replace={0:"Monday", 6:"Sunday"})

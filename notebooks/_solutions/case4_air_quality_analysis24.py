@@ -1,2 +1,3 @@
-FR_station = data['FR04012'] # select the specific data series
-FR_station = FR_station[(FR_station.notnull()) & (FR_station != 0.0)]  # exclude the Nan and zero values
+# Make a barplot of the yearly number of exceedances
+ax = exceedances.loc[2005:].plot(kind='bar')
+ax.axhline(18, color='k', linestyle='--')

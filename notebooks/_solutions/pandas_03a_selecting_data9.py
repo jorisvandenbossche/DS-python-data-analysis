@@ -1,1 +1,1 @@
-df[df['Surname'].str.len() > 15]
+name.split(",")[0]

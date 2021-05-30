@@ -1,3 +1,8 @@
-# Groupby wise
-df2011 = data['2011']
-df2011.groupby(df2011.index.week)[['BETN029', 'BETR801']].quantile(0.95).plot()
+# add a column to the dataframe that indicates the month (integer value of 1 to 12):
+data['month'] = data.index.month
+
+# now, we can calculate the mean of each month over the different years:
+data.groupby('month').mean()
+
+# plot the typical monthly profile of the different stations:
+data.groupby('month').mean().plot()

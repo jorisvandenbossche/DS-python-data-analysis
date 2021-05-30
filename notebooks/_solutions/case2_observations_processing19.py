@@ -1,0 +1,1 @@
+plot_data_selection = plot_data[["plot", "decimalLongitude", "decimalLatitude"]]

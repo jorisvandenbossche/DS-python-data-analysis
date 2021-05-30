@@ -1,0 +1,1 @@
+survey_data_processed['species'].isna().sum()

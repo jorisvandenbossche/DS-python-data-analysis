@@ -1,0 +1,1 @@
+sns.displot(data=titanic, x="Age", row="Sex", aspect=3, height=2)

@@ -1,1 +1,1 @@
-data_tidy['no2'].isnull().sum()
+data_tidy['no2'].isna().sum()

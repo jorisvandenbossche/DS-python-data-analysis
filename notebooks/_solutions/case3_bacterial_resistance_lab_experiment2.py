@@ -1,4 +1,3 @@
-(p9.ggplot(tidy_experiment, p9.aes(x='optical_density'))
-    + p9.geom_histogram(bins=30, color='white', fill='lightgrey')
-    + p9.theme_bw()
-)
+sns.set_style("white")
+sns.displot(tidy_experiment, x="optical_density", 
+            color='grey', edgecolor='white')

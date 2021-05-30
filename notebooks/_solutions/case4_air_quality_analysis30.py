@@ -1,1 +1,3 @@
-subset["weekday"] = subset["weekday"].replace(to_replace={0:"Monday", 6:"Sunday"})
+subset = data['2009-01'].copy()
+subset["dayofweek"] = subset.index.dayofweek
+subset = subset[subset['dayofweek'].isin([0, 6])]

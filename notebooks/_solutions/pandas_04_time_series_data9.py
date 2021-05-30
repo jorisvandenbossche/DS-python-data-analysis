@@ -1,1 +1,1 @@
-data['2013'].mean().plot(kind='barh')
+data['2013':'2013'].mean().plot(kind='barh')
