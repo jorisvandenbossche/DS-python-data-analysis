@@ -1,2 +1,1 @@
-df_monthly = df.resample('M').sum()
-df_monthly.plot()
+df_daily.nlargest(10)
