@@ -1,1 +1,1 @@
-survey_data.groupby("name").size().nlargest(8)
+non_rodent_species = survey_data[survey_data['taxa'].isin(['Rabbit', 'Bird', 'Reptile'])]

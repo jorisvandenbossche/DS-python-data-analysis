@@ -1,1 +1,1 @@
-len(survey_data_unique.dropna()), len(survey_data_unique.dropna(subset=['species']))
+len(survey_data_unique)

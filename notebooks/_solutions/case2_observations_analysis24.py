@@ -1,2 +1,2 @@
-subsetspecies = survey_data[survey_data["name"].isin(['Dipodomys merriami', 'Dipodomys ordii',
-                                                      'Reithrodontomys megalotis', 'Chaetodipus baileyi'])]
+sns.catplot(data=n_plot_sex, x="verbatimLocality", y="count",
+            hue="sex", kind="bar", height=3, aspect=3)

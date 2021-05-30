@@ -1,2 +1,1 @@
-mask = survey_data_unique['species'].isna() & survey_data_unique['sex'].notna()
-not_identified = survey_data_unique[mask]
+len(survey_data_unique.dropna()), len(survey_data_unique.dropna(subset=['species']))

@@ -1,2 +1,2 @@
-survey_data = survey_data_unique.dropna(subset=['species']).copy()
-survey_data['name'] = survey_data['genus'] + ' ' + survey_data['species']
+mask = survey_data_unique['species'].isna() & survey_data_unique['sex'].notna()
+not_identified = survey_data_unique[mask]

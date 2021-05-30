@@ -1,2 +1,7 @@
-sns.catplot(data=survey_data, x="verbatimLocality", 
-            hue="sex", kind="count", height=3, aspect=3)
+# Single line statement
+(survey_data
+     .dropna(subset=["wgt"])
+     .groupby(['name'])["wgt"]
+     .median()
+     .sort_values(ascending=False)
+)

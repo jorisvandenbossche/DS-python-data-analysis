@@ -1,1 +1,2 @@
-month_evolution = subsetspecies.groupby("name").resample('M', on='eventDate').size()
+sns.catplot(data=survey_data, x="verbatimLocality",
+            hue="sex", kind="count", height=3, aspect=3)

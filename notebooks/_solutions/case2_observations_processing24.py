@@ -1,7 +1,7 @@
 def name_match(genus_name, species_name, strict=True):
     """
     Perform a GBIF name matching using the species and genus names
-    
+
     Parameters
     ----------
     genus_name: str
@@ -9,9 +9,9 @@ def name_match(genus_name, species_name, strict=True):
     species_name: str
         name of the species to request more information
     strict: boolean
-        define if the mathing need to be performed with the strict 
+        define if the mathing need to be performed with the strict
         option (True) or not (False)
-    
+
     Returns
     -------
     message: dict
