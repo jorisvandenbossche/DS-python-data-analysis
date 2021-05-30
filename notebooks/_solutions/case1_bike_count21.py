@@ -1,1 +1,2 @@
-df_hourly = df.resample('H').sum()
+df_monthly = df.resample('M').sum()
+df_monthly.plot()
