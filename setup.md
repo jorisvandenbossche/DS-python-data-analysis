@@ -184,7 +184,7 @@ Each of the course modules is set up as a [Jupyter notebook](http://jupyter.org/
 * Start a jupyter notebook server by typing
 
   ```
-  $ jupyter lab
+  jupyter lab
   ```
 
 ### Option 2: Using Anaconda Navigator
