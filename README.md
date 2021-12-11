@@ -15,7 +15,7 @@ The course uses Python 3 and some data analysis packages such as Pandas, Numpy a
 
 For detailed instructions to get started on your local machine , see the [setup instructions](./setup.md).
 
-In case you do not want to install everything and just want to try out the course material, use the environment setup by Binder [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jorisvandenbossche/DS-python-data-analysis/master?urlpath=lab/) and open de notebooks rightaway.
+In case you do not want to install everything and just want to try out the course material, use the environment setup by Binder [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jorisvandenbossche/DS-python-data-analysis/main?urlpath=lab/) and open de notebooks rightaway.
 
 
 ## Contributing
