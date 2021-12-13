@@ -20,15 +20,15 @@ For scientific and data analysis, we recommend to use Anaconda (or Miniconda) (<
 
 ### Install Anaconda
 
-#### Option 1: I do not have Anaconda  installed
+#### Option 1: I do not have Anaconda installed
 
 For first time users and people not fully confident with using the command line, we advise to install Anaconda, by downloading and installing the Python 3.x version from <https://www.anaconda.com/download/>. Recent computers will require the 64-Bit installer.
 
 For more detailed instructions to install Anaconda, check the [Windows](https://docs.anaconda.com/anaconda/install/windows/), [Mac](https://docs.anaconda.com/anaconda/install/mac-os/) or [linux](https://docs.anaconda.com/anaconda/install/linux/) installation tutorial.
 
-**Note:** When you are already familiar to the command line and Python environments you could opt to use Miniconda instead of Anaconda and download it from <https://conda.io/miniconda.html>. The main difference is that Anaconda provides a graphical user interface (Anaconda navigator) and a whole lot of scientific packages (e.g <https://docs.anaconda.com/anaconda/packages/py3.6_win-64/>) when installing, whereas for Miniconda the user needs to install all packages using the command line. On the other hand, Miniconda requires less disk space.
+**Note:** When you are already familiar with the command line and Python environments you could opt to use Miniconda instead of Anaconda and download it from <https://conda.io/miniconda.html>. The main difference is that Anaconda provides a graphical user interface (Anaconda navigator) and a whole lot of scientific packages (e.g <https://docs.anaconda.com/anaconda/packages/py3.6_win-64/>) when installing, whereas for Miniconda the user needs to install all packages using the command line. On the other hand, Miniconda requires less disk space.
 
-#### Option 2: I have installed Anaconda  earlier
+#### Option 2: I have installed Anaconda earlier
 
 When you already have an installation of Anaconda, you have to make sure you are working with the most recent versions. As the course is developed for Python 3, make sure you have Anaconda3 (on Windows, check Start > Programs > Anaconda3). If not, reinstall Anaconda according to the previous section.
 
@@ -42,28 +42,21 @@ Type following command + ENTER-button (make sure you have an internet connection
 conda update -n root conda
 ```
 
-when finished, type (+ ENTER-button):
-
-```
-conda update --all
-```
-
 and respond with *Yes* by typing `y`. Packages should be updated after the completion of the command.
 
-### Setup after installation
+### Setup after Anaconda installation
 
 As not all packages we will use in the course are provided by default as part of Anaconda, we have to add the package to Anaconda to get started. As a good practice, we will create a new _conda environment_ to work with. This environment will contain the required packages on which this course depends.
 
-The packages used in the course are enlisted in an [`environment.yml` file](https://raw.githubusercontent.com/jorisvandenbossche/DS-python-data-analysis/master/environment.yml). The file looks as follows:
+The packages used in the course are enlisted in an [`environment.yml` file](https://raw.githubusercontent.com/jorisvandenbossche/DS-python-data-analysis/main/environment.yml). The file looks as follows:
 
 ```
-name: DS-python-data-analysis
+name: DS-python
 channels:
-- defaults
 - conda-forge
 dependencies:
-- python=3.8
-- pandas=1.2
+- python=3.9
+- pandas>1
 - matplotlib>3
 - ipython
 ...
@@ -74,7 +67,7 @@ The file contains information on:
 - `channels` to define where to download the packages from
 - `dependencies` contains each of the packages
 
-To download the environment file, click to go to the [environment.yml](https://raw.githubusercontent.com/jorisvandenbossche/DS-python-data-analysis/master/environment.yml) online. Once opened in the browser, right-click and save the file/page on your computer. The specific text depends on your browser (`Save page as...`, `Save as...`).
+To download the environment file, click to go to the [environment.yml](https://raw.githubusercontent.com/jorisvandenbossche/DS-python-data-analysis/main/environment.yml) online. Once opened in the browser, right-click and save the file/page on your computer. The specific text depends on your browser (`Save page as...`, `Save as...`).
 
 __WARNING !__ Make sure you save the file as `environment.yml` instead of `environment.yml.txt` which, specifically on Windows operating system, might be the default option. To do so, choose for 'save as type' _All Files_ instead of 'Text Document'.
 
@@ -104,7 +97,7 @@ Respond with *Yes* by typing `y` when asked. Output will be printed and if no er
 When finished, keep the terminal window open (or reopen it). Execute the following commands to check your installation:
 
 ```
-conda activate DS-python-data-analysis
+conda activate DS-python
 ipython
 ```
 
@@ -156,10 +149,10 @@ With `FOLDER_PATH_TO_COURSE_MATERIAL` replaced by the path to the folder with th
 Activate the newly created conda environment:
 
 ```
-conda activate DS-python-data-analysis
+conda activate DS-python
 ```
 
-Run the `check_environment.py` script:
+Then, run the `check_environment.py` script:
 
 ```
 python check_environment.py
@@ -178,7 +171,7 @@ Each of the course modules is set up as a [Jupyter notebook](http://jupyter.org/
 * Ensure that the correct environment is activated.
 
   ```
-  conda activate DS-python-data-analysis
+  conda activate DS-python
   ```
 
 * Start a jupyter notebook server by typing
@@ -189,7 +182,7 @@ Each of the course modules is set up as a [Jupyter notebook](http://jupyter.org/
 
 ### Option 2: Using Anaconda Navigator
 
-In the Anaconda Navigator *Home* tab, first switch to the course environment, called `DS-python-data-analysis` in the selection bar. Next, select the Launch button under the Jupyter Lab icon:
+In the Anaconda Navigator *Home* tab, first switch to the course environment, called `DS-python` in the selection bar. Next, select the Launch button under the Jupyter Lab icon:
 
 ![Navigator terminal](./img/navigator_notebook.png)
 
@@ -197,4 +190,4 @@ In the Anaconda Navigator *Home* tab, first switch to the course environment, ca
 
 This will open a browser window automatically. Navigate to the course directory (if not already there) and choose the `notebooks` folder to access the individual notebooks containing the course material.
 
-If you require some rehearsal of python itself (and numpy), check the [python_recap](https://github.com/jorisvandenbossche/DS-python-data-analysis/tree/master/notebooks/python_recap) folder first, otherwise you can directly jump into the `pandas_0x_` notebooks.
+If you require some rehearsal of python itself (and numpy), check the [python_recap](https://github.com/jorisvandenbossche/DS-python-data-analysis/tree/main/notebooks/python_recap) folder first, otherwise you can directly jump into the `pandas_0x_` notebooks.
