@@ -1,2 +1,1 @@
-def get_surname(name):
-    return name.split(",")[0]
+df[df['Surname'].str.len() > 15]

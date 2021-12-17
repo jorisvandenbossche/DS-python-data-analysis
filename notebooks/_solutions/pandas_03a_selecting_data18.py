@@ -1,1 +1,1 @@
-titles.sort_values('year').head(2)
+len(inception[inception['n'].isna()])

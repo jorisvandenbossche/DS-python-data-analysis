@@ -1,2 +1,1 @@
-survey_data_plots = pd.merge(survey_data_decoupled, plot_data_selection,
-                             how="left", on="plot")
+plot_data.apply(transform_utm_to_wgs, axis=1)

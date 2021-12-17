@@ -1,1 +1,1 @@
-len(titles[titles['title'] == 'Hamlet'])
+inception['n'].isna().sum()

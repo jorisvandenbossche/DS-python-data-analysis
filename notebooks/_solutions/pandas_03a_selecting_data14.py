@@ -1,2 +1,1 @@
-# alternative solution with pandas' string methods
-df['Surname'] = df['Name'].str.split(",").str.get(0)
+titles[titles['title'] == 'Treasure Island'].sort_values('year')
