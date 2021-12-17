@@ -1,1 +1,2 @@
-plot_data_selection = plot_data[["plot", "decimalLongitude", "decimalLatitude"]]
+# test the new function on a single row of the DataFrame
+transform_utm_to_wgs(plot_data.loc[0])

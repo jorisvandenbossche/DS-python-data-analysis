@@ -1,1 +1,1 @@
-df[df['Surname'].str.len() > 15]
+len(titles[titles['year'] // 10 == 195])

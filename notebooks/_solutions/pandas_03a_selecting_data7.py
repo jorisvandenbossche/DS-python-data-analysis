@@ -1,2 +1,1 @@
-name = df['Name'][0]
-name
+name.split(",")[0]

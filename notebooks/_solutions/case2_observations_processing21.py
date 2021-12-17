@@ -1,1 +1,1 @@
-species_data = pd.read_csv("data/species.csv", sep=";")
+plot_data[["decimalLongitude" ,"decimalLatitude"]] = plot_data.apply(transform_utm_to_wgs, axis=1)

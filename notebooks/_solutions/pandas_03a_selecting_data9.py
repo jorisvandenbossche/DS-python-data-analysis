@@ -1,1 +1,1 @@
-name.split(",")[0]
+df[df['Surname'].str.startswith('Williams')]

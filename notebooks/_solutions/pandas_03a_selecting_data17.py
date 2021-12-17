@@ -1,1 +1,1 @@
-len(titles)
+inception = cast[cast['title'] == 'Inception']
