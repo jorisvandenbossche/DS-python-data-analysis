@@ -1,21 +1,18 @@
-name: DS-python-data-analysis
+name: DS-python
 channels:
-- defaults
 - conda-forge
 dependencies:
 - python=3.9
 - ipython
 - jupyter
 - jupyterlab
-- matplotlib>3
-- mplleaflet
-- ipympl
-- notebook
 - numpy
-- pandas>=1.0
+- pandas>=1
+- matplotlib>3
+- ipympl
+- mplleaflet
 - plotnine
 - pyproj
-- python=3.9
 - requests
 - seaborn
 - openpyxl
