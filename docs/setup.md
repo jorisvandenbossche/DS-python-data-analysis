@@ -79,7 +79,7 @@ The file contains information on:
 - `dependencies` contains each of the packages
 
 To download the environment file, click to go to
-the [environment.yml](https://raw.githubusercontent.com/jorisvandenbossche/DS-python-data-analysis/master/environment.yml) online. Once opened in the
+the [environment.yml](https://raw.githubusercontent.com/jorisvandenbossche/DS-python-data-analysis/main/environment.yml) online. Once opened in the
 browser, right-click and save the file/page on your computer. The specific text depends on your browser (`Save page as...`, `Save as...`).
 
 __WARNING !__ Make sure you save the file as `environment.yml` instead of `environment.yml.txt` which, specifically on Windows operating system,
