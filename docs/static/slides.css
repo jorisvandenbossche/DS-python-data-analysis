@@ -1,0 +1,144 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+h1 {
+  margin-top: 0.5em;
+}
+h2 {
+  font-size: 140%;
+  line-height: 150%;
+}
+h3 {
+  font-size: 120%;
+  line-height: 140%;
+}
+h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+li {
+  font-size: 120%;
+  line-height: 130%;
+}
+
+p {
+  font-size: 100%;
+  line-height: 120%;
+}
+
+table {
+  margin: 0 auto 0.8em;
+  border-collapse: collapse;
+}
+td, th {
+  border: 1px solid #ddd;
+  padding: 0.3em 0.5em;
+}
+
+.bgheader h1 {
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 50%;
+  padding: 0.5em;
+  color: white;
+  border-radius: .5em;
+}
+
+.section_background {
+  background-color:#c2c444;
+  color: #fff;
+  font-weight: normal;
+}
+
+.middlebelowheader {
+  /* This fixed size height was found to work well with the slide
+     scaling mechanism of remark.js:
+   */
+  height: 500px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.small {
+  font-size: 90%;
+}
+
+a:visited {
+  color: #356196;
+}
+
+a:link {
+  color: #356196;
+}
+
+.footnote {
+  color: #808080;
+  background-color: rgba(256, 256, 256, 0.9);
+  font-size: 60%;
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  text-align: left;
+  line-height: 100%;
+  padding: 5px;
+}
+
+.remark-slide-content {
+  background-size: contain;
+}
+
+.emphasize  {
+  color: rgba(100, 100, 100, 0.95);
+  font-size: 150%;
+  line-height: 120%;
+}
+
+.widthlimit {
+  width: 600px;
+  font-size: 200%;
+}
+
+.fadetext {
+  opacity: 0.3;
+}
+
+blockquote {
+	padding: 0px 20px;
+  font-weight: lighter;
+	border-left: 5px solid #eee;
+}
+
+code {
+  font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  background-color: #f5f5f5;
+	border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95;
+}
+
+.remark-code {
+  font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+	display: block;
+	padding: 9.5px;
+	margin: 0 0 10px;
+	font-size: 13px;
+	line-height: 1.42857143;
+	color: #333;
+	word-break: break-all;
+	word-wrap: break-word;
+	background-color: #f5f5f5;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+

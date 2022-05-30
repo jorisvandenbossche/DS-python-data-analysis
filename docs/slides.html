@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data manipulation, analysis and visualisation in Python</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="static/slides.css">
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Data manipulation, analysis and visualisation in Python
+
+Specialist course Doctoral schools of Ghent University<br>
+June 8, 9 and 10, 2022
+
+Joris Van den Bossche, Stijn Van Hoey
+
+https://github.com/jorisvandenbossche/DS-python-data-analysis
+
+---
+class: center, middle
+
+# Who are you?
+
+Go to https://hackmd.io/ye6LZ9hAR-22PGiNT2OCMQ?both
+
+<iframe src="https://hackmd.io/ye6LZ9hAR-22PGiNT2OCMQ?both" height="400px" width="800px"></iframe>
+
+---
+
+### Joris Van den Bossche
+
+<a href="https://twitter.com/jorisvdbossche"><img src="./static/img/icon_twitter.svg" alt="Twitter logo" class="icon"> jorisvdbossche</a>
+<a href="https://github.com/jorisvandenbossche"><img src="./static/img/icon_github.svg" alt="Github logo"  class="icon"> jorisvandenbossche</a>
+
+* Open source software developer and teacher
+* Pandas, GeoPandas, scikit-learn, Apache Arrow
+
+.center[
+![:scale 90%](./static/img/work_joris_1.png)]
+
+---
+
+### Stijn Van Hoey
+
+<a href="https://twitter.com/svanhoey"><img src="./static/img/icon_twitter.svg" alt="Twitter logo"> SVanHoey</a>
+<a href="https://github.com/stijnvanhoey"><img src="./static/img/icon_github.svg" alt="Github logo"> stijnvanhoey</a>
+
+* Freelance developer and teacher
+* Research software engineer at [Fluves](https://www.fluves.com/)
+
+.center[
+![:scale 90%](./static/img/work_stijn_1.png)]
+
+---
+class: middle, section_background
+
+# Setting up a working environment
+
+---
+
+## Setting up a working environment
+
+For the setup instructions, see the [setup page](https://jorisvandenbossche.github.io/DS-python-data-analysis/setup.html).
+
+---
+class: left, middle
+
+0. Everyone has conda installed and the environment setup? If not, see [1-install-python-and-the-required-python-packages](https://jorisvandenbossche.github.io/DS-python-data-analysis/setup.html#1-install-python-and-the-required-python-packages)
+1. Make sure to (re)download ALL the course material, see [2-getting-the-course-materials](https://jorisvandenbossche.github.io/DS-python-data-analysis/setup.html#2-getting-the-course-materials) also if you already did this before.
+2. Next, also do section 3 and 4 of the [setup](https://jorisvandenbossche.github.io/DS-python-data-analysis/setup.html)
+
+> If you succesfully done 1, 2 and 3, put up your `green sticky note` on your laptop screen..
+
+Next:
+
+- Surf to and fill in [the questionnaire](https://hackmd.io/ye6LZ9hAR-22PGiNT2OCMQ?both)
+- In Jupyter Lab, start with the 'notebooks/00-jupyter_introduction.ipynb'.
+
+> Installation or setup issues? Put up your `red sticky note` on your laptop screen.
+
+---
+class: center, middle
+
+When you see something like this...
+
+
+![:scale 100%](./static/img/startup.png)
+
+...relax, you're ready to start!
+
+---
+class: center, middle
+
+![:scale 100%](https://i.ytimg.com/vi/PlaYMh-u-2w/maxresdefault.jpg)
+
+---
+class: middle, left
+
+### Time is divided between
+
+- group sessions: we explain new concepts (aka 'theory')
+- practise sessions: you work on exercises or case studies
+
+In case of questions, remarks, suggestions, you can always interrupt us and just ask.
+
+During practise sessions, use the `red sticky note` on top of your laptop screen to let us know you have a question.
+
+### Status check
+
+We will regularly ask for a check (ready with exercise, installation succesfull...). Use the `green sticky note` on top of your laptop screen to say 👍.
+
+### Feel lost?
+
+Just ask either one of us, we are here to help you.
+
+---
+class: middle, center
+
+![:scale 80%](./static/img/issuetracker.png)
+
+Report bugs, typo's, suggestions... as issues ([New issue](https://github.com/jorisvandenbossche/course-python-data/issues/new))
+
+or see the [contributing guidelines](https://github.com/jorisvandenbossche/course-python-data/blob/main/CONTRIBUTING.md)
+
+---
+class: middle, section_background
+
+# Introduction
+
+---
+class: center, middle
+
+index | date
+:-----:|:----:
+2  | 19930000
+8  | 1992-930
+27  | 20050500
+34  | 201405.01
+162 | 7/9/2287
+1400  | 0.0
+2800 | start of the year 2015
+3777 | Summer
+8733  | 2013-2016
+26766  | 26/09/2002 and later 1/1/2016
+40788  | Nan
+41277  | /
+51002  | -999
+51007  | -9999
+
+---
+class: center, middle
+
+![:scale 100%](./static/img/datacleaning1.jpg)
+
+---
+class: center, middle
+
+![:scale 100%](./static/img/datacleaning2.jpg)
+
+---
+class: middle, section_background
+
+# Working with Python
+
+---
+
+# Conda
+
+### Why using conda?
+
+- Consistent package manager across Windows, Mac and Linux
+- Many precompiled packages available
+- Less problems with installation!
+
+--
+
+### Why different environments?
+
+- Manage the dependencies of a specific project/paper/group/...
+- You can install different version of Python and other packages alongside on your computer
+- Easily share environments with other
+
+---
+## Small overview of conda commands
+
+Creating a new environment:
+
+```
+conda create -n my_env python=3.9 pandas
+
+# or from environment file
+conda env create -f environment.yml
+```
+
+Activating an environment:
+
+```
+conda activate my_env
+```
+
+Install a new package:
+
+```
+conda install matplotlib     # if not working, try: pip install ...
+```
+
+List all installed packages: `conda list`
+
+List all your environments: `conda info -e`
+
+See the docs: http://conda.pydata.org/docs/using/index.html
+
+---
+class: center, middle
+
+### Keep track of your python ecosystem <br>with an `environment.yml`
+<br><br>
+
+```
+conda env export > environment.yml
+```
+
+---
+
+# Writing Python code
+
+## IPython console
+
+<br>
+.center[![:scale 75%](./static/img/ipython.png)]
+
+---
+
+## Interactive Development Environment (IDE)
+
+* [**Spyder**](https://pythonhosted.org/spyder/) is shipped with Anaconda. The familiar environment for Matlab/Rstudio-users.
+* [**VS Code**](https://code.visualstudio.com/) is also shipped with Anaconda. General purpose editor with powerful plugin ecosystem.
+* [**PyCharm**](https://www.jetbrains.com/pycharm/): Popular for web-development and Django applications, powerful when doing 'real' development (packages, libraries, software)
+* [Eclipse + **pyDev plugin**](http://www.pydev.org/): If you already work in Eclipse, add the python environment
+* [**Atom**](https://atom.io/), ...
+
+---
+
+## Jupyter Lab/Notebook
+<small>(*previously called IPython notebook*)</small>
+
+**Jupyter notebook** provides an **interactive** scripting environment,<br> ideal for exploration, prototyping,...
+
+.center[![:scale 70%](./static/img/notebook.png)]
+
+--
+
+ ...the stuff we're dealing with in this course!
+
+---
+class: middle, section_background
+
+# Tidy data
+
+---
+class: center, middle
+background-image: url(./static/img/tidy_data_paper.png)
+
+.footnote[Wickham, H. (2014) <br> Tidy Data, Vol. 59, Issue 10, <br> Journal of Statistical Software. doi:10.18637/jss.v059.i10]
+
+---
+class: center, middle
+
+| WWTP | Treatment A | Treatment B |
+|:------|-------------|-------------|
+| Destelbergen | 8.  | 6.3 |
+| Landegem | 7.5  | 5.2 |
+| Dendermonde | 8.3  | 6.2 |
+| Eeklo | 6.5  | 7.2 |
+
+---
+class: center, middle
+
+| WWTP | Treatment | pH |
+|:------|:-------------:|:-------------:|
+| Destelbergen | A  | 8. |
+| Landegem | A  | 7.5 |
+| Dendermonde | A  | 8.3 |
+| Eeklo | A  | 6.5 |
+| Destelbergen | B  | 6.3 |
+| Landegem | B  | 5.2 |
+| Dendermonde | B  | 6.2 |
+| Eeklo | B  | 7.2 |
+
+---
+class: center, middle
+
+.center[![:scale 100%](./static/img/tidy_data_scheme.png)]
+
+---
+class: center, middle
+
+# How are you feeling?
+
+![:scale 100%](http://esq.h-cdn.co/assets/15/51/980x490/landscape-1450137389-john-cleese.JPG)
+
+### https://forms.gle/R47g9xaJ4hRGtajN9
+
+Please fill in the questionnaire!
+
+---
+class: center, middle
+
+# Closing notes
+
+---
+class: center, middle
+
+# Python's scientific ecosystem
+
+#### ## Adjusted from figure by Jake VanderPlas
+
+---
+class: center, middle, bgheader
+background-image: url(./static/img/JakeVdP-ecosystem1.svg)
+background-size: cover
+
+---
+count: false
+class: center, middle, bgheader
+background-image: url(./static/img/JakeVdP-ecosystem2.svg)
+background-size: cover
+
+---
+count: false
+class: center, middle, bgheader
+background-image: url(./static/img/JakeVdP-ecosystem3.svg)
+background-size: cover
+
+---
+count: false
+class: center, middle, bgheader
+background-image: url(./static/img/JakeVdP-ecosystem4.svg)
+background-size: cover
+
+---
+count: false
+class: center, middle, bgheader
+background-image: url(./static/img/JakeVdP-ecosystem5.svg)
+background-size: cover
+
+---
+
+# A rich ecosystem of packages:
+
+<br>
+
+**Machine learning**: scikit-learn, tensorflow, pytorch, keras, chainer, ...
+
+**Performance**: Numba, Cython, Numexpr, Pythran, C/Fortran wrappers, ...
+
+**Visualisation**: Bokeh, Seaborn, Plotnine, Altair, Plotly, Mayavi, HoloViews, datashader, vaex ...
+
+**Data structures and parallel/distributed computation**: Xarray, Dask, Distributed, Cupy, ...
+
+Specialized packages in many **scientific fields**: astronomy, natural language processing, image processing, geospatial, ...
+
+**Packaging and distribution**: pip/wheels, conda, Anaconda, Canopy, ...
+
+---
+class: center, middle
+
+### Reading advice
+
+[Good Enough Practices in Scientific Computing](https://arxiv.org/pdf/1609.00037v1.pdf)
+
+> "*However, while most scientists are careful to validate their laboratory and field equipment, most do not know how reliable their software is*"
+
+---
+class: center, middle
+
+# Thanks
+
+### Joris Van den Bossche
+
+<a href="https://twitter.com/jorisvdbossche"><img src="./static/img/icon_twitter.svg" alt="Twitter logo"> jorisvdbossche</a>
+<a href="https://github.com/jorisvandenbossche"><img src="./static/img/icon_github.svg" alt="Github logo"> jorisvandenbossche</a>
+
+### Stijn Van Hoey
+
+<a href="https://twitter.com/svanhoey"><img src="./static/img/icon_twitter.svg" alt="Twitter logo"> SVanHoey</a>
+<a href="https://github.com/stijnvanhoey"><img src="./static/img/icon_github.svg" alt="Github logo"> stijnvanhoey</a>
+
+</textarea>
+    <script src="./static/remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+    <script>
+        remark.macros.scale = function (percentage) {
+          var url = this;
+          return '<img src="' + url + '" style="width: ' + percentage + '" />';
+      };
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
