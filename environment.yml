@@ -1,4 +1,4 @@
-name: DS-python-data-analysis
+name: DS-python
 channels:
 - defaults
 - conda-forge
