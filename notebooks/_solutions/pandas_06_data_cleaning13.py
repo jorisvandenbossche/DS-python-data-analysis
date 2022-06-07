@@ -1,0 +1,2 @@
+casualties["AGE_CLS"] = casualties["AGE_CLS"].str.replace(" tot ", " - ").str.removesuffix(" jaar").str.strip()
+casualties["AGE_CLS"] = casualties["AGE_CLS"].replace({"Onbekend": None, "75 jaar en meer": ">75", "": None})

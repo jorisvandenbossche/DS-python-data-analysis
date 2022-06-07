@@ -1,0 +1,1 @@
+df_survival.pivot(index="Pclass", columns="Sex", values="Survived")

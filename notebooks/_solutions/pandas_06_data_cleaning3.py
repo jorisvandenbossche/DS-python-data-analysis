@@ -1,0 +1,1 @@
+casualties["SEX"].unique()

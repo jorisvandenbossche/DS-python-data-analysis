@@ -1,0 +1,1 @@
+observations['sex'] = observations['verbatimSex'].replace(sex_dict)

@@ -1,3 +1,3 @@
-# Resample wise
+# Groupby wise
 # Note the different x-axis labels
-df2011[['BETN029', 'BETR801']].resample('W').quantile(0.75).plot()
+df2011.groupby(df2011.index.isocalendar().week)[['BETN029', 'BETR801']].quantile(0.95).plot()

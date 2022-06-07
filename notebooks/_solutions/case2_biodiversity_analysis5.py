@@ -1,1 +1,0 @@
-survey_data_processed.duplicated().sum()

@@ -1,1 +1,0 @@
-len(survey_data_unique)

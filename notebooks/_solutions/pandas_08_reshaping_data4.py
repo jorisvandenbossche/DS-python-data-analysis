@@ -1,0 +1,1 @@
+df_tidy["time"] = pd.to_datetime(df_tidy["time"], format="%Y%m")

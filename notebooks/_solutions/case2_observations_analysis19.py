@@ -1,1 +1,0 @@
-survey_data['name'].value_counts()[:8]

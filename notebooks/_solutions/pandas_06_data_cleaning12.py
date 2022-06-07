@@ -1,0 +1,1 @@
+casualties["week_day"].dtype

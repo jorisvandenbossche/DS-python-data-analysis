@@ -1,18 +1,19 @@
 name: DS-python
 channels:
+- defaults
 - conda-forge
 dependencies:
 - python=3.9
 - ipython
 - jupyter
-- jupyterlab
+- jupyterlab>=3
 - numpy
 - pandas>=1
 - matplotlib>3
-- ipympl
 - mplleaflet
+- ipympl
+- seaborn
 - plotnine
 - pyproj
 - requests
-- seaborn
 - openpyxl
