@@ -60,7 +60,7 @@ requirements = {'numpy': "1.9", 'matplotlib': "2.0",
                 'pandas': "0.25", 'notebook': "5",
                 'plotnine': '0.6',
                 'pyproj': '1.9.5.1', 'requests': '2.18.0',
-                'seaborn': '0.9.0', 'xlrd': '1.1.0'}
+                'seaborn': '0.9.0'}
 
 # now the dependencies
 for lib, required_version in list(requirements.items()):
