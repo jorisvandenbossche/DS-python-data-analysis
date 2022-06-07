@@ -1,1 +1,0 @@
-survey_data['name'] = survey_data['genus'] + ' ' + survey_data['species']

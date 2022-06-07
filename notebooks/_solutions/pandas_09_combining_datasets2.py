@@ -1,0 +1,1 @@
+joined.groupby("TX_LGL_PSN_VAT_EN_LVL1")["MS_NUM_VAT"].sum().sort_values(ascending=False)

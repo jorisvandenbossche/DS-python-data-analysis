@@ -1,1 +1,0 @@
-survey_data['sex'] = survey_data['verbatimSex'].replace(sex_dict)

@@ -1,0 +1,1 @@
+(casualties["DT_HOUR"] == 99).sum()

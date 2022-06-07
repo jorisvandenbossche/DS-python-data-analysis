@@ -1,1 +1,0 @@
-inception['n'].isna().sum()

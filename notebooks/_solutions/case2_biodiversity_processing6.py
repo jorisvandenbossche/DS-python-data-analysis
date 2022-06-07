@@ -1,1 +1,0 @@
-survey_data["sex"].value_counts(dropna=False).plot(kind="barh", color="#00007f")

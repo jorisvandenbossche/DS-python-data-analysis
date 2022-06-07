@@ -1,0 +1,1 @@
+df = pd.read_excel("data/verbruiksgegevens-per-maand.xlsx")

@@ -1,0 +1,1 @@
+observations = pd.read_csv("data/observations.csv", index_col="occurrenceID")

@@ -1,0 +1,1 @@
+joined.groupby("TX_PROV_DESCR_EN")["MS_NUM_VAT"].sum()

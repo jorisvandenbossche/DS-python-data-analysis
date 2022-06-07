@@ -1,0 +1,1 @@
+casualties[["DT_DAY", "DT_HOUR"]].dtypes

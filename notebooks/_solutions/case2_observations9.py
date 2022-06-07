@@ -1,0 +1,1 @@
+observations['species_ID'].isna().sum()
