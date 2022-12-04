@@ -1,0 +1,1 @@
+daily_with_temp = daily_total_counts_2020.reset_index().merge(daily_min_temp_2020, on="datetime")

@@ -1,6 +1,9 @@
-sns.catplot(data=compare_dead_30,
-            x="dead_prop",
-            y="road_user_type",
+sns.catplot(data=casualties_motorway_trucks,
+            x="week_day",
+            y="n_victims",
+            estimator=np.sum,
+            ci=None,
             kind="bar",
-            hue="datetime"
-           )
+            color="#900C3F",
+            height=3, 
+            aspect=4)

@@ -1,1 +1,1 @@
-len(titles[titles['title'] == 'Hamlet'])
+titles.nsmallest(2, columns="year")

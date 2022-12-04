@@ -1,4 +1,2 @@
-# Using Seaborn
-sns.relplot(data=daily_total_counts_2020,
-            kind="line", 
-            aspect=4, height=3)
+# Pandas area plot
+monthly_victim_counts.plot.area(colormap='Reds', figsize=(15, 5))

@@ -1,1 +1,1 @@
-len(inception[inception['n'].isna()])
+inception = cast[cast['title'] == 'Inception']

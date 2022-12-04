@@ -1,1 +1,1 @@
-df.groupby('AgeClass')['Fare'].mean().plot(kind='bar', rot=0)
+df.groupby('AgeClass')['Fare'].mean().plot.bar(rot=0)
