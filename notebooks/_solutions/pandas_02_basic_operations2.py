@@ -1,1 +1,1 @@
-df['Age'].hist() #bins=30, log=True
+df['Age'].plot.hist()  # bins=30, log=True)

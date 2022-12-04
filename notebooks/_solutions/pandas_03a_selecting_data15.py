@@ -1,1 +1,1 @@
-len(titles[(titles['year'] >= 1950) & (titles['year'] <= 1959)])
+titles[titles['title'] == 'Treasure Island'].sort_values('year')

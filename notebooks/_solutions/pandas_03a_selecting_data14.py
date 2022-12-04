@@ -1,1 +1,1 @@
-titles[titles['title'] == 'Treasure Island'].sort_values('year')
+len(titles[titles['title'] == 'Hamlet'])

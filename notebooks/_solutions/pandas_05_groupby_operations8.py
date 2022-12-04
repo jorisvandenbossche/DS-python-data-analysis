@@ -1,1 +1,1 @@
-titles.groupby('decade').size().plot(kind='bar', color='green')
+titles.groupby('decade').size().plot.bar(color='green')

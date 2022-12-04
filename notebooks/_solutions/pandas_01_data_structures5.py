@@ -1,1 +1,1 @@
-df['Fare'].plot(kind='box')  # or .plot.box()
+df['Fare'].plot.box()  # or .plot(kind='box')

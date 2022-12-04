@@ -1,1 +1,1 @@
-len(inception[inception['n'].notna()])
+inception['n'].isna().sum()

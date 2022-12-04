@@ -1,1 +1,1 @@
-len(titles[titles['year'] // 10 == 195])
+len(titles[(titles['year'] >= 1950) & (titles['year'] <= 1959)])
