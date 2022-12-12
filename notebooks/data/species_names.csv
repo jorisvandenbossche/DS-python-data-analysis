@@ -1,0 +1,39 @@
+name,class,kingdom,order,phylum,scientificName,ID,taxa
+Dipodomys merriami,Mammalia,Animalia,Rodentia,Chordata,"Dipodomys merriami Mearns, 1890",2439521,Rodent
+Perognathus flavus,Mammalia,Animalia,Rodentia,Chordata,"Perognathus flavus Baird, 1855",2439566,Rodent
+Peromyscus eremicus,Mammalia,Animalia,Rodentia,Chordata,"Peromyscus eremicus (Baird, 1857)",2437981,Rodent
+Sigmodon hispidus,Mammalia,Animalia,Rodentia,Chordata,"Sigmodon hispidus Say & Ord, 1825",2438147,Rodent
+Dipodomys spectabilis,Mammalia,Animalia,Rodentia,Chordata,"Dipodomys spectabilis Merriam, 1890",2439531,Rodent
+Chaetodipus penicillatus,Mammalia,Animalia,Rodentia,Chordata,"Chaetodipus penicillatus (Woodhouse, 1852)",2439591,Rodent
+Onychomys torridus,Mammalia,Animalia,Rodentia,Chordata,"Onychomys torridus (Coues, 1874)",2438516,Rodent
+Dipodomys ordii,Mammalia,Animalia,Rodentia,Chordata,"Dipodomys ordii Woodhouse, 1853",2439541,Rodent
+Spermophilus spilosoma,Mammalia,Animalia,Rodentia,Chordata,"Spermophilus spilosoma Bennett, 1833",2437300,Rodent-not censused
+Onychomys leucogaster,Mammalia,Animalia,Rodentia,Chordata,"Onychomys leucogaster (Wied-Neuwied, 1841)",2438517,Rodent
+Reithrodontomys megalotis,Mammalia,Animalia,Rodentia,Chordata,"Reithrodontomys megalotis (Baird, 1857)",2437874,Rodent
+Sylvilagus audubonii,Mammalia,Animalia,Lagomorpha,Chordata,"Sylvilagus audubonii (Baird, 1858)",2436910,Rabbit
+Peromyscus maniculatus,Mammalia,Animalia,Rodentia,Chordata,"Peromyscus maniculatus (Wagner, 1845)",2437967,Rodent
+Ammospermophilus harrisi,Mammalia,Animalia,Rodentia,Chordata,"Ammospermophilus harrisii (Audubon & Bachman, 1854)",2437568,Rodent-not censused
+Amphispiza bilineata,Aves,Animalia,Passeriformes,Chordata,"Amphispiza bilineata (Cassin, 1850)",2491757,Bird
+Campylorhynchus brunneicapillus,Aves,Animalia,Passeriformes,Chordata,"Campylorhynchus brunneicapillus (Lafresnaye, 1835)",5231474,Bird
+Calamospiza melanocorys,Aves,Animalia,Passeriformes,Chordata,"Calamospiza melanocorys Stejneger, 1885",2491893,Bird
+Callipepla squamata,Aves,Animalia,Galliformes,Chordata,"Callipepla squamata (Vigors, 1830)",5228075,Bird
+Reithrodontomys fulvescens,Mammalia,Animalia,Rodentia,Chordata,"Reithrodontomys fulvescens J.A.Allen, 1894",2437864,Rodent
+Pipilo chlorurus,Aves,Animalia,Passeriformes,Chordata,"Pipilo chlorurus (Audubon, 1839)",2491276,Bird
+Pooecetes gramineus,Aves,Animalia,Passeriformes,Chordata,"Pooecetes gramineus (J.F.Gmelin, 1789)",2491728,Bird
+Perognathus hispidus,Mammalia,Animalia,Rodentia,Chordata,"Perognathus hispidus Baird, 1858",2439584,Rodent
+Pipilo fuscus,Aves,Animalia,Passeriformes,Chordata,"Pipilo fuscus Swainson, 1827",2491244,Bird
+Crotalus viridis,Reptilia,Animalia,Squamata,Chordata,"Crotalus viridis Rafinesque, 1818",8945077,Reptile
+Zonotrichia leucophrys,Aves,Animalia,Passeriformes,Chordata,"Zonotrichia leucophrys (J.R.Forster, 1772)",5231132,Bird
+Sceloporus clarki,Reptilia,Animalia,Squamata,Chordata,"Sceloporus clarkii Baird & Girard, 1852",2451192,Reptile
+Baiomys taylori,Mammalia,Animalia,Rodentia,Chordata,"Baiomys taylori (Thomas, 1887)",2438866,Rodent
+Sigmodon fulviventer,Mammalia,Animalia,Rodentia,Chordata,"Sigmodon fulviventer J.A.Allen, 1889",2438153,Rodent
+Reithrodontomys montanus,Mammalia,Animalia,Rodentia,Chordata,"Reithrodontomys montanus (Baird, 1855)",2437866,Rodent
+Ammodramus savannarum,Aves,Animalia,Passeriformes,Chordata,"Ammodramus savannarum (J.F.Gmelin, 1789)",2491123,Bird
+Sigmodon ochrognathus,Mammalia,Animalia,Rodentia,Chordata,"Sigmodon ochrognathus Bailey, 1902",2438156,Rodent
+Chaetodipus intermedius,Mammalia,Animalia,Rodentia,Chordata,"Chaetodipus intermedius (Merriam, 1889)",2439589,Rodent
+Spermophilus tereticaudus,Mammalia,Animalia,Rodentia,Chordata,"Spermophilus tereticaudus Baird, 1858",2437325,Rodent-not censused
+Cnemidophorus uniparens,Reptilia,Animalia,Squamata,Chordata,"Cnemidophorus uniparens Wright & Lowe, 1965",5227544,Reptile
+Sceloporus undulatus,Reptilia,Animalia,Squamata,Chordata,"Sceloporus undulatus (Bosc & Daudin, 1801)",2451347,Reptile
+Chaetodipus baileyi,Mammalia,Animalia,Rodentia,Chordata,"Chaetodipus baileyi (Merriam, 1894)",2439581,Rodent
+Peromyscus leucopus,Mammalia,Animalia,Rodentia,Chordata,"Peromyscus leucopus (Rafinesque, 1818)",2438019,Rodent
+Cnemidophorus tigris,Reptilia,Animalia,Squamata,Chordata,"Cnemidophorus tigris Grismer, 1999",8071886,Reptile
