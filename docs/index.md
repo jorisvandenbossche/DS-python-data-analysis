@@ -58,7 +58,10 @@ For the course slides, click [here](https://jorisvandenbossche.github.io/DS-pyth
 Found any typo or have a suggestion, see [how to contribute](./contributing.html).
 
 ## Meta
+
 Authors: Joris Van den Bossche, Stijn Van Hoey
+
+With the support of the Flemish Government.
 
 <img src="./static/img/logo_flanders+richtingmorgen.png" width="79%">
 <img src="./static/img/doctoralschoolsprofiel_hq_rgb_web.png" width="20%">

@@ -48,7 +48,7 @@ the *base (root) environment*, click the arrow next to it and click `Open termin
 Type following command + ENTER-button (make sure you have an internet connection):
 
 ```
-conda update -n root conda
+conda update -n base conda
 ```
 and respond with *Yes* by typing `y`. Packages should be updated after the completion of the command.
 
@@ -67,7 +67,7 @@ channels:
 - defaults
 - conda-forge
 dependencies:
-- python=3.9
+- python=3.11
 - ipython
 - jupyter
 - ...
@@ -99,6 +99,8 @@ the *base (root) environment*, click the arrow next to it and click `Open termin
 Type following commands line by line + ENTER-button (make sure you have an internet connection):
 
 ```
+conda install -n base conda-libmamba-solver
+conda config --set solver libmamba
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 cd FOLDER_PATH_TO_ENVIRONMENT_FILE
