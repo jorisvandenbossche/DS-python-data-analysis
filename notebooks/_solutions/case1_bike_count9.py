@@ -1,2 +1,4 @@
-df2 = df2.rename(columns={'ri Centrum': 'direction_centre',
-                          'ri Mariakerke':'direction_mariakerke'})
+df2022 = df2022.rename(columns={'Tegenrichting': 'direction_centre',
+                                'Hoofdrichting': 'direction_mariakerke',
+                                'Totaal': 'total',
+                                'Locatie': 'location'})

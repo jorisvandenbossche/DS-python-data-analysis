@@ -1,1 +1,1 @@
-casualties["SEX"].unique()
+casualties_raw["DT_HOUR"].unique()

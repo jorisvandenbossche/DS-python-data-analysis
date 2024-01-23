@@ -1,1 +1,2 @@
-(casualties["DT_HOUR"] == 99).sum()
+casualties_nl = casualties_raw.drop(columns=column_names_with_fr)
+casualties_nl

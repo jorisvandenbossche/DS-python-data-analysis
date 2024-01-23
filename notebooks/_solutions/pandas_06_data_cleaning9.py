@@ -1,1 +1,1 @@
-casualties["datetime"] = casualties["DT_DAY"] + " " + casualties["DT_HOUR"].astype(str) + ":00"
+casualties["datetime"] = casualties["DT_DAY"] + " " + casualties["DT_HOUR"].astype(str)

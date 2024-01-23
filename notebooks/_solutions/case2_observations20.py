@@ -1,1 +1,1 @@
-non_rodent_species = survey_data[survey_data['taxa'].isin(['Rabbit', 'Bird', 'Reptile'])]
+observations['name'].value_counts().iloc[:8]

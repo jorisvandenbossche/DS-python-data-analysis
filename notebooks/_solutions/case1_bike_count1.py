@@ -1,1 +1,1 @@
-df = pd.read_csv("data/fietstellingencoupure.csv", sep=';')
+df = pd.read_csv("data/fietstelpaal-coupure-links-2022-gent.zip", sep=';')
