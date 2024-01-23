@@ -1,1 +1,1 @@
-df_hourly = df.resample('H').sum()
+df_hourly = df.resample('h').sum()

@@ -5,8 +5,8 @@ def process_bike_count_data(df):
     ----------
     df : pandas.DataFrame
         DataFrame as read from the raw `fietstellingen`,
-        containing the `datum`, `tijd`, `ri Centrum`
-        and `ri Mariakerke` columns.
+        containing the 'Datum', 'Uur5Minuten', 
+        'Ordening', 'Totaal', 'Tegenrichting', 'Hoofdrichting' columns.
 
     Returns
     -------
@@ -15,9 +15,13 @@ def process_bike_count_data(df):
         `direction_centre` and `direction_mariakerke` columns
         with the counts.
     """
-    df.index = pd.to_datetime(df['datum'] + ' ' + df['tijd'],
-                              format="%d/%m/%Y %H:%M")
-    df2 = df.drop(columns=['datum', 'tijd'])
-    df2 = df2.rename(columns={'ri Centrum': 'direction_centre',
-                              'ri Mariakerke':'direction_mariakerke'})
+    timestamps = pd.to_datetime(df["Ordening"], format="%Y-%m-%dT%H:%M:%S%z", utc=True)    
+    df2 = df.drop(columns=['Datum', 'Uur5Minuten', 'Ordening', 'Code'])
+    df2["timestamp"] = timestamps
+    df2 = df2.set_index("timestamp")
+    df2 = df2.rename(columns={'Tegenrichting': 'direction_centre',
+                              'Hoofdrichting': 'direction_mariakerke',
+                              'Totaal': 'total',
+                              'Locatie': 'location'
+                             })
     return df2

@@ -1,2 +1,4 @@
-sns.catplot(data=survey_data, x="verbatimLocality", 
-            hue="sex", kind="count", height=3, aspect=3)
+# Multiple lines
+obs_with_weight = survey_data.dropna(subset=["weight"])
+median_weight = obs_with_weight.groupby(['name'])["weight"].median()
+median_weight.sort_values(ascending=False)

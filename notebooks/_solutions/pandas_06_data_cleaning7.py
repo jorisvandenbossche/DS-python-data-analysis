@@ -1,1 +1,2 @@
-casualties["DT_HOUR"] = casualties["DT_HOUR"].replace(99, 9)
+casualties = casualties_nl.rename(columns=clean_column_name)
+casualties.head()

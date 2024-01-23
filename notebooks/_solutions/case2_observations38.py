@@ -1,4 +1,2 @@
-heatmap_prep = survey_data.pivot_table(index='year', columns='month', 
-                                       values="ID", aggfunc='count')
-fig, ax = plt.subplots(figsize=(10, 8))
-ax = sns.heatmap(heatmap_prep, cmap='Reds')
+# Single line statement
+survey_data.dropna(subset=["weight"]).groupby(['name'])["weight"].median().sort_values(ascending=False)
