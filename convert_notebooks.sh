@@ -2,6 +2,7 @@
 # it creates there a notebooks/ and _solved/solutions/ dir
 # that get automatically copied to the correct places
 
+
 declare -a arr=(
                 #"00-jupyter_introduction.ipynb"
                 #"01-basic.ipynb"
@@ -51,3 +52,38 @@ rm -r notebooks/
 rm -r _solutions/
 
 cd ..
+
+
+declare -a arr=(
+                "00-jupyterlab.ipynb"
+                "01-variables.ipynb"
+                "02-functions-use.ipynb"
+                "03-containers.ipynb"
+                "04-control-flow.ipynb"
+                "05-functions-write.ipynb"
+                )
+
+cd _solved/python_intro
+
+mkdir ./notebooks
+
+echo "- Converting notebooks"
+
+for i in "${arr[@]}"
+do
+   echo "--" "$i"
+   jupyter nbconvert --to=notebook --config ../../nbconvert_config.py --output "notebooks/$i" "$i"
+done
+
+
+
+echo "- Copying converted notebooks and solutions"
+cp -r notebooks/. ../../notebooks/python_intro
+cp -r _solutions/. ../../notebooks/python_intro/_solutions
+
+rm -r notebooks/
+rm -r _solutions/
+
+cd ../..
+
+
