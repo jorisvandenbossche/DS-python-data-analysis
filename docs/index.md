@@ -3,12 +3,12 @@
 ## Introduction
 
 The handling of data is a recurring task for data analysts. Reading in experimental data, checking its properties,
-and creating visualisations may become tedious tasks. Hence, increasing the efficiency in this process is beneficial for many professionals
+and creating visualisations are crucial steps in the research process. Hence, increasing the efficiency in this process is beneficial for professionals
 handling data. Spreadsheet-based software lacks the ability to properly support this process, due to the lack of automation and repeatability.
 The usage of a high-level scripting language such as Python is ideal for these tasks.
 
 This course trains participants to use Python effectively to do these tasks. The course focuses on data manipulation and cleaning of tabular data,
-explorative analysis and visualisation using important packages such as Pandas, Numpy, Matplotlib and Seaborn.
+explorative analysis and visualisation using important packages such as Pandas, Matplotlib and Seaborn.
 
 The course does not cover statistics, data mining, machine learning, or predictive modelling. It aims to provide participants the means to effectively
 tackle commonly encountered data handling tasks in order to increase the overall efficiency. These skills are both useful for data cleaning as well as
