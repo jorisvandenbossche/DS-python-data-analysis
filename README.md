@@ -13,7 +13,7 @@ The course has been developed as a specialist course for the Doctoral schools of
 
 The course uses Python 3 and some data analysis packages such as Pandas, Numpy and Matplotlib. To install the required libraries, we highly recommend Anaconda or miniconda (<https://www.anaconda.com/download/>) or another Python distribution that includes the scientific libraries (this recommendation applies to all platforms, so for both Window, Linux and Mac).
 
-For detailed instructions to get started on your local machine , see the [setup instructions](./setup.md).
+For detailed instructions to get started on your local machine , see the [setup instructions](./docs/setup.md).
 
 In case you do not want to install everything and just want to try out the course material, use the environment setup by Binder [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jorisvandenbossche/DS-python-data-analysis/main?urlpath=lab/) and open de notebooks rightaway.
 
