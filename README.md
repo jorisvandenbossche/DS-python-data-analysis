@@ -20,7 +20,7 @@ In case you do not want to install everything and just want to try out the cours
 
 ## Contributing
 
-Found any typo or have a suggestion, see [how to contribute](./CONTRIBUTING.md).
+Found any typo or have a suggestion, see [how to contribute](./docs/contributing.md).
 
 
 ## Meta 
