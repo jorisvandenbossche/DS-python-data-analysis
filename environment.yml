@@ -2,12 +2,12 @@ name: DS-python
 channels:
 - conda-forge
 dependencies:
-- python=3.11
+- python=3.12
 - ipython
 - jupyter
 - jupyterlab>=3
 - numpy
-- pandas=2.1
+- pandas=2.2
 - matplotlib>3
 - mplleaflet
 - ipympl
@@ -16,3 +16,5 @@ dependencies:
 - pyproj
 - requests
 - openpyxl
+- geopandas
+- pyarrow
