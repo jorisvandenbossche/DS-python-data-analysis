@@ -1,1 +1,1 @@
-data.resample('M').std().plot() # 'A'
+data.resample('ME').std().plot() # 'A'
